@@ -1,9 +1,54 @@
 import ExtLink from './ext-link'
 
+import styles from '../styles/footer.module.css'
+
+import GitHub from '../components/svgs/github'
+import Twitter from '../components/svgs/twitter'
+import Envelope from '../components/svgs/envelope'
+import LinkedIn from '../components/svgs/linkedin'
+import Facebook from '../components/svgs/facebook'
+
+const contacts = [
+  {
+    Comp: Twitter,
+    alt: 'twitter icon',
+    link: 'https://twitter.com/tomoyamachi',
+  },
+  {
+    Comp: GitHub,
+    alt: 'github icon',
+    link: 'https://github.com/goodwithtech',
+  },
+  {
+    Comp: Facebook,
+    alt: 'facebook icon',
+    link: 'https://www.facebook.com/tomoyamachi/',
+  },
+  {
+    Comp: LinkedIn,
+    alt: 'linkedin icon',
+    link: 'https://www.linkedin.com/in/tomoyamachi/',
+  },
+  {
+    Comp: Envelope,
+    alt: 'envelope icon',
+    link: 'mailto:info@goodwith.tech',
+  },
+]
+
 export default () => (
-  <>
-    <footer>
-      <ExtLink href="https://github.com/ijjk/notion-blog">Source code</ExtLink>
-    </footer>
-  </>
+  <footer>
+    <div className={styles.links}>
+      {contacts.map(({ Comp, link, alt }) => {
+        return (
+          <ExtLink key={link} href={link} aria-label={alt}>
+            <Comp height={32} />
+          </ExtLink>
+        )
+      })}
+    </div>
+    <div className={styles.logo}>
+      <img src="/small-logo.png" />
+    </div>
+  </footer>
 )
