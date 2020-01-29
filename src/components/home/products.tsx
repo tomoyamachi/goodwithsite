@@ -29,8 +29,8 @@ const products = [
 
 export default () => (
   <>
-    <h1>PRODUCTS</h1>
-    <div id="products" className={styles.products}>
+    <h1 id="products">PRODUCTS</h1>
+    <div className={styles.products}>
       {products.map(({ name, url, image, role }) => (
         <div className={styles.product} key={name}>
           <a href={url}>
