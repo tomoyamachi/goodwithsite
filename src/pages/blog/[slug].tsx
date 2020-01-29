@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import Header from '../../components/header'
+import Header from '../../components/layout/header'
 import Heading from '../../components/heading'
 import components from '../../components/dynamic'
 import ReactJSXParser from '@zeit/react-jsx-parser'

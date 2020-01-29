@@ -1,12 +1,12 @@
-import ExtLink from './ext-link'
+import ExtLink from '../ext-link'
 
-import styles from '../styles/footer.module.css'
+import styles from '../../styles/footer.module.css'
 
-import GitHub from '../components/svgs/github'
-import Twitter from '../components/svgs/twitter'
-import Envelope from '../components/svgs/envelope'
-import LinkedIn from '../components/svgs/linkedin'
-import Facebook from '../components/svgs/facebook'
+import GitHub from '../svgs/github'
+import Twitter from '../svgs/twitter'
+import Envelope from '../svgs/envelope'
+import LinkedIn from '../svgs/linkedin'
+import Facebook from '../svgs/facebook'
 
 const contacts = [
   {

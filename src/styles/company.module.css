@@ -1,0 +1,16 @@
+.tables {
+  border-collapse: collapse;
+}
+
+.tables dl {
+  display: table-row;
+  line-height: 2;
+}
+
+.tables dt {
+  display: table-cell;
+}
+
+.tables dd {
+  display: table-cell;
+}

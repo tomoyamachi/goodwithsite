@@ -1,4 +1,4 @@
-import styles from '../styles/products.module.css'
+import styles from '../../styles/products.module.css'
 
 const products = [
   {
@@ -30,7 +30,7 @@ const products = [
 export default () => (
   <>
     <h1>PRODUCTS</h1>
-    <div className={styles.products}>
+    <div id="products" className={styles.products}>
       {products.map(({ name, url, image, role }) => (
         <div className={styles.product} key={name}>
           <a href={url}>

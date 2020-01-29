@@ -1,5 +1,7 @@
 .layout {
   padding-top: 64px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .layout img {
@@ -8,7 +10,6 @@
   height: auto;
 }
 
-.layout h1,
-.layout h2 {
+.layout h1 {
   text-align: center;
 }
