@@ -1,4 +1,4 @@
-import styles from '../../styles/company.module.css'
+import styles from 'company.module.css'
 
 const companies = [
   {

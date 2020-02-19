@@ -1,4 +1,4 @@
-import styles from '../../styles/products.module.css'
+import styles from './products.module.css'
 import Title from '../atoms/title'
 const products = [
   {
