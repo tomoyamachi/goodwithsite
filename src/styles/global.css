@@ -233,17 +233,73 @@ mark {
 }
 
 h1 {
-  margin: var(--gap-double) 0 calc(0.5 * var(--gap)) 0;
-  font-size: 2.25rem;
-  font-weight: 800;
-  letter-spacing: -0.05rem;
+  font-family: Noto Sans CJK JP;
+  font-weight: bold;
+  font-size: 22pt;
+  line-height: 36pt;
+  letter-spacing: 3.74pt;
+  color: #666666;
+  color: rgb(102, 102, 102);
 }
 
 h2 {
-  font-weight: 300;
-  font-size: 1.25rem;
-  letter-spacing: -0.02rem;
-  color: var(--accents-3);
+  font-family: Noto Sans CJK JP;
+  font-weight: bold;
+  font-size: 22pt;
+  color: #666666;
+  color: rgb(102, 102, 102);
+}
+
+h3 {
+  font-family: Noto Sans CJK JP;
+  font-weight: bold;
+  font-size: 18pt;
+  line-height: 15.4pt;
+  letter-spacing: 0.9pt;
+  color: #666666;
+  color: rgb(89, 87, 87);
+}
+
+h4 {
+  font-family: Noto Sans CJK JP;
+  font-size: 14pt;
+  line-height: 29pt;
+  color: #666666;
+  color: rgb(102, 102, 102);
+}
+
+h5 {
+  font-family: Noto Sans CJK JP;
+  font-weight: bold;
+  font-size: 50pt;
+  line-height: 36pt;
+  color: #2096a3;
+  color: rgb(32, 150, 163);
+}
+
+.bule {
+  font-family: Noto Sans CJK JP;
+  font-weight: bold;
+  font-size: 20pt;
+  color: #2096a3;
+  color: rgb(32, 150, 163);
+}
+
+.h4.bold {
+  font-family: Noto Sans CJK JP;
+  font-weight: bold;
+  font-size: 14pt;
+  line-height: 29pt;
+  color: #666666;
+  color: rgb(102, 102, 102);
+}
+
+footer {
+  font-family: Noto Sans CJK JP;
+  font-size: 12pt;
+  line-height: 29pt;
+  color: #808080;
+  color: rgb(128, 128, 128);
 }
 
 .video {

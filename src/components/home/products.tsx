@@ -1,5 +1,5 @@
 import styles from '../../styles/products.module.css'
-
+import Title from '../atoms/title'
 const products = [
   {
     name: 'dockle',
@@ -29,7 +29,7 @@ const products = [
 
 export default () => (
   <>
-    <h1 id="products">PRODUCTS</h1>
+    <Title id="products">PRODUCTS</Title>
     <div className={styles.products}>
       {products.map(({ name, url, image, role }) => (
         <div className={styles.product} key={name}>

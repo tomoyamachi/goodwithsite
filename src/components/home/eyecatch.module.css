@@ -1,0 +1,22 @@
+@media screen and (min-width: 34em) {
+  .media {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'content image';
+  }
+}
+
+.content {
+  grid-area: content;
+  grid-column: 0/3;
+}
+
+.image {
+  grid-area: image;
+  grid-column: 2/3;
+}
+
+.image img {
+  width: 476px;
+}

@@ -1,0 +1,13 @@
+.btn {
+  display: inline-block;
+  padding: 16px 60px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #fff;
+  background-image: linear-gradient(60deg, #329eaa 30%, #dddc8a 100%);
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background-image: linear-gradient(60deg, #329eaa 0%, #dddc8a 100%);
+}
