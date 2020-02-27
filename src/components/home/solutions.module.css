@@ -1,0 +1,29 @@
+@media screen and (min-width: 34em) {
+  .media {
+    display: grid;
+    grid-template-columns: '1fr 1fr 1fr 1fr 1fr 1fr';
+    grid-template-rows: '100px 1fr 100px 1fr 1fr';
+    grid-template-areas: 'header content mainimage image1 image2 image3 title1 title2 title3 detail1 detail2 detail3';
+  }
+}
+
+#header {
+  grid-area: header;
+  grid-column: 0;
+  grid-row: 0;
+}
+.content {
+  grid-area: content;
+  grid-column: 0;
+  grid-row: 1;
+}
+
+.mainimage {
+  grid-area: mainimage;
+  grid-column: 1/2;
+  grid-row: 1;
+}
+
+.image img {
+  width: 476px;
+}

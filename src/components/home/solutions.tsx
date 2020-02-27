@@ -1,6 +1,9 @@
+import styles from './solutions.module.css'
+import Title from '../atoms/title'
+
 export default () => (
   <>
-    <h1 id="solutions">SOLUTIONS</h1>
+    <Title id="products">SOLUTIONS</Title>
     <div>
       <h2>Container Secutity Specialist</h2>
       <div>ITを</div>

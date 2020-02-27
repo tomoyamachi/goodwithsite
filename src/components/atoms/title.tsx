@@ -1,7 +1,7 @@
-import styles from '../../styles/button.module.css'
-
 export default ({ id, children }) => (
   <>
-    <h2 id={id}>{children}</h2>
+    <h2 className="center" id={id}>
+      {children}
+    </h2>
   </>
 )
