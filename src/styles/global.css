@@ -215,11 +215,13 @@ figure {
 }
 
 a {
-  color: #0070f3;
+  color: #2096a3;
+  color: rgb(32, 150, 163);
   text-decoration: none;
 }
 a:hover {
-  color: #3291ff;
+  color: #2096a3;
+  color: rgb(32, 150, 163);
 }
 
 .links {
@@ -235,46 +237,30 @@ mark {
 h1 {
   font-family: Noto Sans CJK JP, sans-serif;
   font-weight: bold;
-  font-size: 22pt;
-  line-height: 36pt;
-  letter-spacing: 3.74pt;
+  font-size: 20pt;
+
   color: #666666;
-  color: rgb(102, 102, 102);
 }
 
 h2 {
   font-family: Noto Sans CJK JP;
   font-weight: bold;
-  font-size: 22pt;
+  font-size: 20pt;
   color: #666666;
-  color: rgb(102, 102, 102);
 }
 
 h3 {
   font-family: Noto Sans CJK JP;
   font-weight: bold;
-  font-size: 18pt;
-  line-height: 15.4pt;
-  letter-spacing: 0.9pt;
+  font-size: 16pt;
   color: #666666;
-  color: rgb(89, 87, 87);
 }
 
 h4 {
   font-family: Noto Sans CJK JP;
   font-size: 14pt;
-  line-height: 26pt;
   color: #666666;
   color: rgb(102, 102, 102);
-}
-
-h5 {
-  font-family: Noto Sans CJK JP;
-  font-weight: bold;
-  font-size: 50pt;
-  line-height: 36pt;
-  color: #2096a3;
-  color: rgb(32, 150, 163);
 }
 
 .bule {

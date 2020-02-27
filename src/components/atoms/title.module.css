@@ -15,4 +15,8 @@
 .title h5 {
   display: inline-block;
   margin: 0 30px;
+  font-family: Noto Sans CJK JP;
+  font-weight: bold;
+  font-size: 50pt;
+  color: #2096a3;
 }

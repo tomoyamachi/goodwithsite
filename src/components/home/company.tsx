@@ -48,7 +48,7 @@ export default () => (
     <Title id="company">COMPANY</Title>
 
     <div>
-      <h2>Corporate Profile</h2>
+      <h3>Corporate Profile</h3>
       <table className={styles.tables}>
         {companies.map(({ label, val }) => (
           <tr key={label}>
@@ -59,7 +59,7 @@ export default () => (
       </table>
     </div>
     <div>
-      <h2>Skills</h2>
+      <h3>Skills</h3>
       <table className={styles.tables}>
         {skills.map(({ label, val }) => (
           <tr key={label}>

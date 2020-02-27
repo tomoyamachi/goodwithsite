@@ -4,7 +4,7 @@ export default () => {
   return (
     <div className={styles.media}>
       <div className={styles.content}>
-        <h2>We design DevSecOps on Containers</h2>
+        <h1>We design DevSecOps on Containers</h1>
         <div className={styles.body}>
           <Button href="/#solutions">MORE ></Button>
         </div>

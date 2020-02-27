@@ -1,9 +1,11 @@
-.blogIndex {
-  padding: 0 5%;
+.blogIndex h1,
+.post h1 {
+  font-size: 18pt;
 }
 
-.blogIndex h1 {
-  margin-bottom: 50px;
+.blogIndex h2,
+.post h2 {
+  font-size: 14pt;
 }
 
 .noPosts {
@@ -15,23 +17,32 @@
   margin: 10px auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 }
+.postPreview h3 {
+  margin: 10px auto 0px auto;
+  font-size: 18px;
+}
+
+.postPreview p {
+  font-size: 16px;
+  margin: 5px auto;
+}
 
 .postPreview:last-child {
   border-bottom: none;
 }
 
-.postPreview h3,
-.post h1 {
-  margin-bottom: 0;
+.author {
+  font-size: 16px;
 }
 
-.post h1 {
-  margin-top: 0;
+.posted {
+  font-size: 12px;
+  color: #666666;
 }
 
 .post :global(h2),
 .post :global(h3) {
-  margin: 3rem 0 1.5rem 0;
+  margin: 1.5rem 0 0.5rem 0;
 }
 
 .post :global(video),
@@ -42,14 +53,10 @@
   display: block;
 }
 
-.postPreview :global(.posted) {
-  margin-bottom: 0.5em;
-}
-
 .post {
+  padding-top: 100px;
   max-width: calc(600px + 10%);
   margin: 0 auto;
-  padding: 5%;
 }
 
 .post :global(hr) {
