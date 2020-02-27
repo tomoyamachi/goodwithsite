@@ -48,7 +48,9 @@ export default () => (
       })}
     </div>
     <div className={styles.logo}>
-      <img src="/small-logo.png" />
+      <a href="/">
+        <img src="/imgs/footer-logo.png" />
+      </a>
     </div>
   </footer>
 )

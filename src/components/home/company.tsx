@@ -1,4 +1,5 @@
-import styles from 'company.module.css'
+import styles from './company.module.css'
+import Title from '../atoms/title'
 
 const companies = [
   {
@@ -44,11 +45,11 @@ const skills = [
 
 export default () => (
   <>
-    <h1 id="company">COMPANY</h1>
+    <Title id="company">COMPANY</Title>
 
     <div>
       <h2>Corporate Profile</h2>
-      <table>
+      <table className={styles.tables}>
         {companies.map(({ label, val }) => (
           <tr key={label}>
             <td>{label}</td>
@@ -58,8 +59,8 @@ export default () => (
       </table>
     </div>
     <div>
-      <table>
-        <h2>Skills</h2>
+      <h2>Skills</h2>
+      <table className={styles.tables}>
         {skills.map(({ label, val }) => (
           <tr key={label}>
             <td>{label}</td>

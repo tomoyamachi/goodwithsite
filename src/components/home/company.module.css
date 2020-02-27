@@ -1,16 +1,15 @@
 .tables {
-  border-collapse: collapse;
+  margin: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-style: italic;
+  border: solid 2px #464646;
+  color: #464646;
+}
+.tables tr {
+  line-height: 36px;
 }
 
-.tables dl {
-  display: table-row;
-  line-height: 2;
-}
-
-.tables dt {
-  display: table-cell;
-}
-
-.tables dd {
-  display: table-cell;
+.tables td {
+  padding: 0 10px;
 }

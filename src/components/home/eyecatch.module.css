@@ -10,6 +10,12 @@
 .content {
   grid-area: content;
   grid-column: 0/3;
+  padding: 20px;
+}
+.body {
+  margin: auto;
+  text-align: center;
+  padding: 10px;
 }
 
 .image {

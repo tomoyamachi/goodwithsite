@@ -18,7 +18,7 @@ export default ({ titlePre = '' }) => {
   return (
     <header className={styles.header}>
       <Head>
-        <title>{titlePre ? `${titlePre} |` : ''} My Notion Blog</title>
+        <title>{titlePre ? `${titlePre} |` : ''} GOODWITH Blog</title>
         <meta name="description" content="GOODWITH LLC.," />
         <meta name="og:title" content="GOODWITH LLC.," />
         <meta property="og:image" content={ogImageUrl} />
