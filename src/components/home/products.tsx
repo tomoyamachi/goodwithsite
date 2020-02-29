@@ -6,7 +6,7 @@ const products = {
   AUTHOR: [
     {
       //name: 'dockle',
-      name: 'Docker Image Linter for Security and Best Practices',
+      name: 'Container Linter for Security and Best Practices',
       url: 'https://github.com/goodwithtech/dockle',
       image: '/products/dockle.png',
       imageWidth: 165,
@@ -21,7 +21,7 @@ const products = {
   ],
   DEVELOPER: [
     {
-      name: 'Vulnerability Scanner for Containers',
+      name: 'Vulnerability scanner for Containers',
       url: 'https://github.com/aquasec/trivy',
       image: '/products/trivy.png',
       imageWidth: 92,
@@ -38,7 +38,9 @@ const products = {
 const Products = ({ url, name, image, imageWidth }) => (
   <div className={styles.product} key={name}>
     <a href={url}>
-      <img src={image} width={imageWidth} />
+      <div className={styles.productImage}>
+        <img src={image} width={imageWidth} />
+      </div>
       <h4>{name}</h4>
       <Button href={url}>LINK</Button>
     </a>

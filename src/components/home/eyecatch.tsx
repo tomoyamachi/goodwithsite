@@ -6,7 +6,7 @@ export default () => {
       <div className={styles.content}>
         <h1>We design DevSecOps on Containers</h1>
         <div className={styles.body}>
-          <Button href="/#solutions">MORE ></Button>
+          <Button href="/#solutions">MORE</Button>
         </div>
       </div>
 

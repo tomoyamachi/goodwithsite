@@ -17,6 +17,20 @@
   margin: 0 auto;
 }
 
+.product h4 {
+  margin: 1rem 0;
+}
+
+.productImage {
+  height: 155px;
+}
+
+.productImage img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .role {
   padding: 10px 0;
 }
@@ -32,5 +46,17 @@
   .product div {
     flex-basis: auto;
     padding-left: 0;
+  }
+
+  .productImage {
+    height: auto;
+    width: 300px;
+    padding: 10px;
+  }
+
+  .productImage img {
+    position: relative;
+    top: auto;
+    transform: none;
   }
 }

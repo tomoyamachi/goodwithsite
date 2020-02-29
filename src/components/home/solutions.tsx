@@ -32,7 +32,7 @@ export default () => (
           IT.
         </p>
         <p>
-          We specialize is DevSecOps (DevOps with Security), Container-based
+          We specialize in DevSecOps (DevOps with Security), Container-based
           Architecture Design and Communication between Frontend and Backend.
         </p>
       </div>
