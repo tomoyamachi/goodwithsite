@@ -46,8 +46,10 @@ const tables = {
 
 const Table = ({ label, val }) => (
   <tr key={label}>
-    <td className={styles.label}>{label}</td>
-    <td>{val}</td>
+    <td key="label" className={styles.label}>
+      {label}
+    </td>
+    <td key="val">{val}</td>
   </tr>
 )
 
