@@ -3,20 +3,22 @@ import Title from '../atoms/title'
 
 const services = [
   {
-    title: 'Consulting',
+    title: 'Consultation',
     image: '/imgs/icon-01.png',
-    detail: 'We can advice your system architecture.',
+    detail:
+      'We provide professional consulting on system architecture, especially related to containers',
   },
   {
     title: 'Development',
     image: '/imgs/icon-02.png',
-    detail: 'We develop your system, from inflastructure to programming.',
+    detail:
+      'We have extensive experience in creating products, managing architecture, and achieving operational excellence',
   },
   {
     title: 'Management',
     image: '/imgs/icon-03.png',
     detail:
-      'We can manage your project, we have professional project managemente licences.',
+      'We have professional project management licenses and can help you manage your IT based projects',
   },
 ]
 
@@ -26,9 +28,12 @@ export default () => (
     <div className={styles.media}>
       <div className={styles.content}>
         <p>
-          Our value is problem-solving consulting and service development based
-          on IT. DevSecOps (DevOps with Security), secure container deployment
-          technologies, and container-based architecture design.
+          We provide consulting to solve problems and develop products based in
+          IT.
+        </p>
+        <p>
+          We specialize is DevSecOps (DevOps with Security), Container-based
+          Architecture Design and Communication between Frontend and Backend.
         </p>
       </div>
       <div className={styles.image}>

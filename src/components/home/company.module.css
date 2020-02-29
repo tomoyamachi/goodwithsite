@@ -1,10 +1,9 @@
 .tables {
-  margin: 10px;
-  width: 100%;
+  min-width: calc(100% - 2px);
   box-sizing: border-box;
-  font-style: italic;
   border: solid 2px #464646;
   color: #464646;
+  margin: 1px;
 }
 .tables tr {
   line-height: 36px;
@@ -12,4 +11,19 @@
 
 .tables td {
   padding: 0 10px;
+}
+
+.role {
+  padding: 0;
+}
+
+.role h3 {
+  font-weight: bold;
+  font-size: 20pt;
+  color: #2096a3;
+  color: rgb(32, 150, 163);
+}
+
+.label {
+  width: 20%;
 }

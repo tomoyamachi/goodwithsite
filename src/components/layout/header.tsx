@@ -5,12 +5,10 @@ import { useRouter } from 'next/router'
 import styles from '../../styles/header.module.css'
 
 const navItems: { label: string; page?: string; link?: string }[] = [
-  { label: 'PRODUCTS', page: '/#products' },
-  { label: 'SOLUTIONS', page: '/#solutions' },
   { label: 'BLOG', page: '/blog' },
 ]
 
-const ogImageUrl = 'https://notion-blog.tomoyamachi.now.sh/big-logo.png'
+const ogImageUrl = 'https://www.goodwith.tech/big-logo.png'
 
 export default ({ titlePre = '' }) => {
   const { pathname } = useRouter()

@@ -6,7 +6,7 @@ const products = {
   AUTHOR: [
     {
       //name: 'dockle',
-      name: 'Docker Image Linter for Security and Best Practice',
+      name: 'Docker Image Linter for Security and Best Practices',
       url: 'https://github.com/goodwithtech/dockle',
       image: '/products/dockle.png',
       imageWidth: 165,
