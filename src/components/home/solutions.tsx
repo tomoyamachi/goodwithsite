@@ -50,7 +50,9 @@ export default () => (
 
 const Services = ({ title, image, detail }) => (
   <div className={styles.service} key={title}>
-    <img src={image} />
+    <div className={styles.productImage}>
+      <img src={image} />
+    </div>
     <h4>{title}</h4>
     <p>{detail}</p>
   </div>

@@ -21,16 +21,6 @@
   margin: 1rem 0;
 }
 
-.productImage {
-  height: 155px;
-}
-
-.productImage img {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .role {
   padding: 10px 0;
 }
@@ -40,6 +30,16 @@
   font-size: 20pt;
   color: #2096a3;
   color: rgb(32, 150, 163);
+}
+
+.productImage {
+  height: 155px;
+}
+
+.productImage img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @media (max-width: 600px) {

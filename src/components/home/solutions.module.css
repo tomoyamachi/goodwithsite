@@ -63,3 +63,22 @@
 .service img {
   width: 62px;
 }
+
+@media (max-width: 600px) {
+  .product div {
+    flex-basis: auto;
+    padding-left: 0;
+  }
+
+  .productImage {
+    height: auto;
+    width: 300px;
+    padding: 10px;
+  }
+
+  .productImage img {
+    position: relative;
+    top: auto;
+    transform: none;
+  }
+}
