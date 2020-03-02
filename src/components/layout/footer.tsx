@@ -12,7 +12,7 @@ const contacts = [
   {
     Comp: Twitter,
     alt: 'twitter icon',
-    link: 'https://twitter.com/tomoyamachi',
+    link: 'https://twitter.com/goodwithllc',
   },
   {
     Comp: GitHub,
@@ -22,12 +22,12 @@ const contacts = [
   {
     Comp: Facebook,
     alt: 'facebook icon',
-    link: 'https://www.facebook.com/tomoyamachi/',
+    link: 'https://fb.me/goodwithllc',
   },
   {
     Comp: LinkedIn,
     alt: 'linkedin icon',
-    link: 'https://www.linkedin.com/in/tomoyamachi/',
+    link: 'https://www.linkedin.com/company/goodwithllc',
   },
   {
     Comp: Envelope,

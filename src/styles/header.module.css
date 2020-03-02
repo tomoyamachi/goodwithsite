@@ -44,7 +44,7 @@
 }
 
 .header :global(a.active) {
-  color: #0070f3;
+  color: #2096a3;
   font-weight: 600;
 }
 
