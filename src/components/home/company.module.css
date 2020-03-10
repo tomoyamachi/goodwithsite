@@ -1,8 +1,8 @@
 .tables {
   min-width: calc(100% - 2px);
   box-sizing: border-box;
-  border: solid 2px #464646;
-  color: #464646;
+  border: solid 2px #c5c5c5;
+  color: #666666;
   margin: 1px;
 }
 .tables tr {
