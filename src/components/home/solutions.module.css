@@ -1,5 +1,7 @@
 .solution {
   background-color: #f1f1f1;
+  margin: 90px 0px 60px;
+  padding: 10px 0px 63px 10px;
 }
 
 @media (max-width: 600px) {
@@ -15,7 +17,8 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 'content image';
-    margin: 0 0 100px 0;
+    margin: 66px auto 38px;
+    max-width: 1000px;
   }
 }
 
@@ -31,14 +34,15 @@
 }
 
 .image img {
-  width: 320px;
+  width: 396px;
+  padding-bottom: 60px;
 }
 
 .services {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  width: 920px;
+  width: 940px;
   max-width: calc(100vw - var(--gap-double));
   text-align: center;
   justify-content: center;
