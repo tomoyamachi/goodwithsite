@@ -4,13 +4,15 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 'content image';
+    max-width: 1500px;
+    margin: 0 auto 150px;
   }
 }
 
 .content {
   grid-area: content;
   grid-column: 0/3;
-  padding: 20px;
+  padding-top: 130px;
 }
 .body {
   margin: auto;
@@ -24,5 +26,5 @@
 }
 
 .image img {
-  width: 476px;
+  width: 596px;
 }
