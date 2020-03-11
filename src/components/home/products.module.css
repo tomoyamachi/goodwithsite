@@ -18,7 +18,7 @@
 }
 
 .product h4 {
-  margin: 1rem 0;
+  margin: 1.3rem 0;
 }
 
 .role {
@@ -30,6 +30,7 @@
   font-size: 20pt;
   color: #2096a3;
   color: rgb(32, 150, 163);
+  margin: 47px 0 66px;
 }
 
 .productImage {
