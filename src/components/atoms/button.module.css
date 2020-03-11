@@ -16,16 +16,17 @@
 }
 
 .btn:before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border: 0px;
-    border-top: solid 2px #fff;
-    border-right: solid 2px #fff;
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(49deg);
-    position: absolute;
-    top: 50%;
-    right: 44px;
-    margin-top: -4px;
+  content: '';
+  width: 6px;
+  height: 6px;
+  border: 0px;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(49deg);
+  position: absolute;
+  top: 50%;
+  right: 44px;
+  margin-top: -4px;
+}

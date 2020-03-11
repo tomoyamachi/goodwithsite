@@ -36,7 +36,7 @@ const products = {
 }
 
 const Products = ({ url, name, image, imageWidth }) => (
-  <div className={styles.product} key={name}>
+  <div className={styles.product}>
     <a href={url}>
       <div className={styles.productImage}>
         <img src={image} width={imageWidth} />
@@ -52,12 +52,12 @@ export default () => (
 
     {Object.keys(products).map(role => (
       <div key={role}>
-        <div className={styles.role}>
+        <div className={styles.role} key={role}>
           <h3 className="center">{role}</h3>
         </div>
-        <div className={styles.products}>
-          {products[role].map(product => (
-            <Products {...product}></Products>
+        <div className={styles.products} key="products">
+          {products[role].map((product, idx) => (
+            <Products key={idx} {...product}></Products>
           ))}
         </div>
       </div>

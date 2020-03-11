@@ -42,14 +42,14 @@ export default () => (
     </div>
     <div className={styles.services}>
       {services.map(service => (
-        <Services {...service}></Services>
+        <Services key={service.title} {...service}></Services>
       ))}
     </div>
   </div>
 )
 
 const Services = ({ title, image, detail }) => (
-  <div className={styles.service} key={title}>
+  <div className={styles.service}>
     <div className={styles.productImage}>
       <img src={image} />
     </div>

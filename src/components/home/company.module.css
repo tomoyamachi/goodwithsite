@@ -1,3 +1,7 @@
+.company {
+  /*company block*/
+}
+
 .tables {
   min-width: calc(100% - 2px);
   box-sizing: border-box;
@@ -16,7 +20,7 @@
 
 .role {
   padding: 4px;
-  margin:10px;
+  margin: 10px;
 }
 
 .role h3 {
