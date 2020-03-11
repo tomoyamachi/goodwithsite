@@ -6,9 +6,26 @@
   color: #fff;
   background-image: linear-gradient(60deg, #329eaa 30%, #dddc8a 100%);
   transition: 0.4s;
+  position: relative;
+  display: inline-block;
 }
 
 .btn:hover {
   background-image: linear-gradient(60deg, #329eaa 0%, #dddc8a 100%);
   color: #fff;
 }
+
+.btn:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 0px;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(49deg);
+    position: absolute;
+    top: 50%;
+    right: 44px;
+    margin-top: -4px;
