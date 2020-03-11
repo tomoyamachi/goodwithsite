@@ -1,16 +1,17 @@
 .tables {
   min-width: calc(100% - 2px);
   box-sizing: border-box;
-  border: solid 2px #464646;
-  color: #464646;
+  border: solid 1px #b2b2b2;
+  color: #666666;
   margin: 1px;
+  padding: 80px 20px 40px;
 }
 .tables tr {
-  line-height: 36px;
+  line-height: 44px;
 }
 
 .tables td {
-  padding: 0 10px;
+  padding: 0 17px;
 }
 
 .role {
@@ -31,5 +32,5 @@
 }
 
 .label {
-  width: 20%;
+  width: 28%;
 }
