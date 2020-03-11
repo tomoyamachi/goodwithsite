@@ -16,16 +16,19 @@
 
 .role {
   padding: 4px;
-  margin: -23px;
+  margin:10px;
 }
 
 .role h3 {
   font-weight: bold;
-  font-size: 20pt;
+  font-size: 18pt;
   color: #2096a3;
   color: rgb(32, 150, 163);
   position: relative;
-  top: 73px;
+  top: 78px;
+  left: 26px;
+  text-align: left;
+  display: inline;
 }
 
 .label {
