@@ -52,6 +52,7 @@ module.exports = {
     cfg.entry = async () => {
       const entries = { ...(await originalEntry()) }
       entries['./scripts/build-rss.js'] = './src/lib/build-rss.ts'
+      entries['./scripts/build-sitemap.js'] = './src/lib/build-sitemap.ts'
       return entries
     }
     return cfg

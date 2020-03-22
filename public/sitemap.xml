@@ -1,0 +1,18 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>https://www.goodwith.tech</loc>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://www.goodwith.tech/blog</loc>
+        <priority>0.80</priority>
+    </url>
+    
+    <url><loc>https://www.goodwith.tech/blog/go-pprof</loc><priority>0.64</priority></url>
+    <url><loc>https://www.goodwith.tech/blog/trivy-harbor-docker-enterprise</loc><priority>0.64</priority></url>
+    <url><loc>https://www.goodwith.tech/blog/hosting-helm-chart-private-repository-in-github-and-gitlab</loc><priority>0.64</priority></url>
+    <url><loc>https://www.goodwith.tech/blog/create-a-kubernetes-cluster-with-kubeadm-and-calico</loc><priority>0.64</priority></url>
+    <url><loc>https://www.goodwith.tech/blog/kubernetes-in-local</loc><priority>0.64</priority></url>
+    <url><loc>https://www.goodwith.tech/blog/how-to-host-static-site-by-cloud-storage</loc><priority>0.64</priority></url>
+    <url><loc>https://www.goodwith.tech/blog/the-way-to-build-your-corporate-sites-for-free</loc><priority>0.64</priority></url>
+</urlset>

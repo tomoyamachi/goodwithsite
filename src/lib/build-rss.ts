@@ -43,7 +43,7 @@ function mapToEntry(post) {
               : post.content
           )}
           <p class="more">
-            <a href="${post.link}">Read more</a>
+            <a href="${post.link}">...Read more</a>
           </p>
         </div>
       </content>
@@ -62,7 +62,7 @@ function createRSS(blogPosts = []) {
   <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Goodwith Blog</title>
     <subtitle>We design DevSecOps on Containers.</subtitle>
-    <link href="/atom" rel="self" type="application/rss+xml"/>
+    <link href="/feed" rel="self" type="application/rss+xml"/>
     <link href="/" />
     <updated>${NOW}</updated>
     <id>Goodwith Blog</id>${postsString}
