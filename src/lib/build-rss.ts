@@ -96,7 +96,7 @@ async function main() {
     post.date = post.Date
   })
 
-  const outputPath = './public/atom'
+  const outputPath = './public/feed'
   await writeFile(resolve(outputPath), createRSS(blogPosts))
   console.log(`Atom feed file generated at \`${outputPath}\``)
 }
