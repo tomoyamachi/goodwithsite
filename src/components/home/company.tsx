@@ -20,29 +20,15 @@ const tables = {
       val: 'IT-based consulting solutions, especialy Container x Security.',
     },
   ],
-  SKILLS: [
-    {
-      label: 'Platform',
-      val: 'GCP, AWS, Azure',
-    },
-    {
-      label: 'Programming',
-      val: 'Go, TypeScript, Python, PHP',
-    },
-    {
-      label: 'Orchestrations',
-      val: 'Kubernetes, Elastic Container Service',
-    },
-    {
-      label: 'Container Security',
-      val: 'AquaSecurity, Sysdig, TwistLock',
-    },
-    {
-      label: 'Database',
-      val: 'MySQL, PostgreSQL, Oracle Database',
-    },
-  ],
 }
+
+const skillMaps = [
+  ['GCP', 'AWS', 'Azure'],
+  ['Go', 'TypeScript', 'Python', 'PHP'],
+  ['Docker', 'Kubernetes'],
+  ['AquaSecurity', 'Sysdig', 'TwistLock'],
+  ['MySQL', 'PostgreSQL', 'OracleDatabase'],
+]
 
 const Table = ({ label, val }) => (
   <tr>
@@ -68,5 +54,20 @@ export default () => (
         </table>
       </div>
     ))}
+
+    <div key="skills">
+      <div className={styles.role}>
+        <h3 className="center">SKILLS</h3>
+      </div>
+      <div className={styles.skills}>
+        {skillMaps.map(skills => (
+          <div className={styles.skill}>
+            {skills.map(skill => (
+              <img alt={skill} src={`/skills/${skill}.png`} />
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
   </div>
 )
