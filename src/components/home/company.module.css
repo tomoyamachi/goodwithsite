@@ -41,7 +41,15 @@
 }
 
 .skills {
+    min-width: calc(100% - 2px);
+    box-sizing: border-box;
+    border: 1px solid #b2b2b2;
+    color: #666;
+    margin: 1px;
+    padding: 80px 20px 40px;
 }
 
-.skill {
+.skill img {
+  width: 110px;
+  margin: 0;
 }
