@@ -8,6 +8,7 @@
         <priority>0.80</priority>
     </url>
     
+    <url><loc>https://www.goodwith.tech/blog/create-secure-projects-in-golang</loc><priority>0.64</priority></url>
     <url><loc>https://www.goodwith.tech/blog/go-pprof</loc><priority>0.64</priority></url>
     <url><loc>https://www.goodwith.tech/blog/trivy-harbor-docker-enterprise</loc><priority>0.64</priority></url>
     <url><loc>https://www.goodwith.tech/blog/hosting-helm-chart-private-repository-in-github-and-gitlab</loc><priority>0.64</priority></url>

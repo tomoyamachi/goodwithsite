@@ -26,7 +26,7 @@ const skillMaps = [
   ['GCP', 'AWS', 'Azure'],
   ['Go', 'TypeScript', 'Python', 'PHP'],
   ['Docker', 'Kubernetes'],
-  ['AquaSecurity', 'Sysdig', 'TwistLock'],
+  ['AquaSecurity', 'Sysdig', 'Twistlock'],
   ['MySQL', 'PostgreSQL', 'OracleDatabase'],
 ]
 
