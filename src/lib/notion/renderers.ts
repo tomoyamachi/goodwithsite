@@ -5,11 +5,15 @@ function applyTags(tags = [], children, noPTag = false, key) {
   let child = children
 
   for (const tag of tags) {
-    const props: { [key: string]: any } = { key }
+    let props: { [key: string]: any } = { key }
     let tagName = tag[0]
 
     if (noPTag && tagName === 'p') tagName = React.Fragment
-    if (tagName === 'c') tagName = 'code'
+    // inline code do not use code tag
+    if (tagName === 'c') {
+      tagName = 'inlineCode'
+      props = { className: 'inline-code' }
+    }
 
     if (tagName === 'a') {
       props.href = tag[1]
