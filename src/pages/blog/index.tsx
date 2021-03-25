@@ -4,20 +4,24 @@ import Header from '../../components/layout/header'
 import blogStyles from '../../styles/blog.module.css'
 import sharedStyles from '../../styles/shared.module.css'
 
-import { getBlogLink, getDateStr, postIsReady } from '../../lib/blog-helpers'
+import {
+  getBlogLink,
+  getDateStr,
+  postIsPublished,
+} from '../../lib/blog-helpers'
 import { textBlock } from '../../lib/notion/renderers'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 
-export async function unstable_getStaticProps() {
+export async function getStaticProps({ preview }) {
   const postsTable = await getBlogIndex()
 
   const authorsToGet: Set<string> = new Set()
   const posts: any[] = Object.keys(postsTable)
-    .map(slug => {
+    .map((slug) => {
       const post = postsTable[slug]
       // remove draft posts in production
-      if (!postIsReady(post)) {
+      if (!preview && !postIsPublished(post)) {
         return null
       }
       post.Authors = post.Authors || []
@@ -30,34 +34,51 @@ export async function unstable_getStaticProps() {
 
   const { users } = await getNotionUsers([...authorsToGet])
 
-  posts.map(post => {
-    post.Authors = post.Authors.map(id => users[id].full_name)
+  posts.map((post) => {
+    post.Authors = post.Authors.map((id) => users[id].full_name)
   })
 
   return {
     props: {
+      preview: preview || false,
       posts,
     },
     revalidate: 10,
   }
 }
 
-export default ({ posts = [] }) => {
+const Index = ({ posts = [], preview }) => {
   return (
     <>
       <Header titlePre="Blog" />
+      {preview && (
+        <div className={blogStyles.previewAlertContainer}>
+          <div className={blogStyles.previewAlert}>
+            <b>Note:</b>
+            {` `}Viewing in preview mode{' '}
+            <Link href={`/api/clear-preview`}>
+              <button className={blogStyles.escapePreview}>Exit Preview</button>
+            </Link>
+          </div>
+        </div>
+      )}
       <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
         <h1>Posts</h1>
         {posts.length === 0 && (
           <p className={blogStyles.noPosts}>There are no posts yet</p>
         )}
-        {posts.map(post => {
+        {posts.map((post) => {
           return (
             <div className={blogStyles.postPreview} key={post.Slug}>
               <h3>
-                <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                  <a>{post.Page}</a>
-                </Link>
+                <span className={blogStyles.titleContainer}>
+                  {!post.Published && (
+                    <span className={blogStyles.draftBadge}>Draft</span>
+                  )}
+                  <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
+                    <a>{post.Page}</a>
+                  </Link>
+                </span>
               </h3>
               {post.Authors.length > 0 && (
                 <span className={blogStyles.author}>
@@ -84,3 +105,5 @@ export default ({ posts = [] }) => {
     </>
   )
 }
+
+export default Index

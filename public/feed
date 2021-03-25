@@ -4,13 +4,13 @@
     <subtitle>We design DevSecOps on Containers.</subtitle>
     <link href="/feed" rel="self" type="application/rss+xml"/>
     <link href="/" />
-    <updated>2020-12-17T13:50:43.449Z</updated>
+    <updated>2021-03-25T09:16:47.024Z</updated>
     <id>Goodwith Blog</id>
     <entry>
       <id>/blog/deep-dive-into-docker-container-images</id>
       <title>Deep Dive into Docker Container Images</title>
       <link href="/blog/deep-dive-into-docker-container-images"/>
-      <updated>2020-04-07T15:00:00.656Z</updated>
+      <updated>2020-04-07T15:00:00.193Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           <p>I created an open-source tool, <a href="https://github.com/goodwithtech/dockertags" rel="noopener" target="_blank">Dockertags</a>. This tool is very easy to use. You only need to run <span class="inline-code">dockertags imageName</span>. <a href="https://github.com/goodwithtech/dockertags" rel="noopener" target="_blank">Dockertags</a> shows what tags exist in a remote image registry. <a href="https://github.com/goodwithtech/dockertags" rel="noopener" target="_blank">Dockertags</a> works in multiple registries, it currently supports Docker Hub, GCR, and ECR. Here are some sample commands and outputs. </p>
@@ -25,7 +25,7 @@
       <id>/blog/create-secure-projects-in-golang</id>
       <title>Create secure projects in Golang</title>
       <link href="/blog/create-secure-projects-in-golang"/>
-      <updated>2020-03-22T15:00:00.656Z</updated>
+      <updated>2020-03-22T15:00:00.193Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           <p>Go language has become a popular language in the world today. Many famous open-source products use Golang. Today I will introduce simple tips on how to create a secure project in Golang.</p><p>Beforehand. I would like to recommend reading <a href="https://owasp.org/www-project-go-secure-coding-practices-guide/" rel="noopener" target="_blank">OWASP(Open Web Application Security Project)&#x27;s Secure Coding Plactice</a> even if your application is not a web application. It is one of the best books on secure coding in Golang. Today, I will talk about tips not included in OWASP Go guidelines.</p>
@@ -40,7 +40,7 @@
       <id>/blog/go-pprof</id>
       <title>How I profiled Go code with pprof</title>
       <link href="/blog/go-pprof"/>
-      <updated>2020-03-17T15:00:00.656Z</updated>
+      <updated>2020-03-17T15:00:00.193Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           <p>I have been using Go language(Golang). I like Golang because it has great official tools and it’s easy to start developing and improving products. For example, Golang has an official code formatter go fmt, so I do not care about coding rules while writing Golang.</p><p>Today I will introduce Golang official code profiling tool pprof, it also visualizes profiling data. It is very easy to use.</p>
@@ -55,7 +55,7 @@
       <id>/blog/trivy-harbor-docker-enterprise</id>
       <title>Trivy adopted by Harbor and Docker Enterprise</title>
       <link href="/blog/trivy-harbor-docker-enterprise"/>
-      <updated>2020-03-15T15:00:00.656Z</updated>
+      <updated>2020-03-15T15:00:00.193Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           <p>Today, Trivy adopted by famous container registry services, Harbor registry and Mirantis Docker Enterprise. Trivy is an easy-to-use open-source vulnerability scanner for container images. It detects vulnerabilities not only in OS packages but also in application libraries, e.g. node(JavaScript), gem(Ruby).</p>
@@ -70,7 +70,7 @@
       <id>/blog/hosting-helm-chart-private-repository-in-github-and-gitlab</id>
       <title>Hosting HELM chart private repositories in GitHub and GitLab</title>
       <link href="/blog/hosting-helm-chart-private-repository-in-github-and-gitlab"/>
-      <updated>2020-02-14T15:00:00.657Z</updated>
+      <updated>2020-02-14T15:00:00.193Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           <p>Helm is a popular tool for Kubernetes package manager. This article introduces what is  Helm and how to host private helm repositories.</p>
@@ -85,7 +85,7 @@
       <id>/blog/create-a-kubernetes-cluster-with-kubeadm-and-calico</id>
       <title>Create a Kubernetes Cluster with Kubeadm and Calico on GCP instances</title>
       <link href="/blog/create-a-kubernetes-cluster-with-kubeadm-and-calico"/>
-      <updated>2020-02-10T15:00:00.657Z</updated>
+      <updated>2020-02-10T15:00:00.194Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           
@@ -100,7 +100,7 @@
       <id>/blog/kubernetes-in-local</id>
       <title>Create Development Environment with Kubernetes Clusters in your mac (with MySQL, ElasticSearch)</title>
       <link href="/blog/kubernetes-in-local"/>
-      <updated>2018-06-10T15:00:00.657Z</updated>
+      <updated>2018-06-10T15:00:00.194Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           
@@ -115,7 +115,7 @@
       <id>/blog/how-to-host-static-site-by-cloud-storage</id>
       <title>How to host static site by Google Cloud Storage</title>
       <link href="/blog/how-to-host-static-site-by-cloud-storage"/>
-      <updated>2018-02-22T15:00:00.657Z</updated>
+      <updated>2018-02-22T15:00:00.194Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           
@@ -130,7 +130,7 @@
       <id>/blog/the-way-to-build-your-corporate-sites-for-free</id>
       <title>The way to build your corporate sites for free</title>
       <link href="/blog/the-way-to-build-your-corporate-sites-for-free"/>
-      <updated>2017-08-27T15:00:00.657Z</updated>
+      <updated>2017-08-27T15:00:00.194Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           
