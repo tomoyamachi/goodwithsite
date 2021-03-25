@@ -14,9 +14,17 @@ function applyTags(tags = [], children, noPTag = false, key) {
       tagName = 'inlineCode'
       props = { className: 'inline-code' }
     }
-
+    if (tagName === '_') {
+      tagName = 'span'
+      props.className = 'underline'
+    }
     if (tagName === 'a') {
       props.href = tag[1]
+    }
+    if (tagName === 'e') {
+      tagName = components.Equation
+      props.displayMode = false
+      child = tag[1]
     }
 
     child = React.createElement(components[tagName] || tagName, props, child)

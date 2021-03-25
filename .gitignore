@@ -17,7 +17,7 @@
 
 # misc
 .DS_Store
-.env*
+.env.local*
 
 # debug
 npm-debug.log*
@@ -27,4 +27,5 @@ yarn-error.log*
 .blog_index_data
 .blog_index_data_previews
 
+.now
 .vercel
