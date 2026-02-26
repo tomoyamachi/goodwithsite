@@ -41,21 +41,5 @@ if (!BLOG_INDEX_ID) {
   )
 }
 
-module.exports = {
-  webpack(cfg, { dev, isServer }) {
-    // only compile build-rss in production server build
-    if (dev || !isServer) return cfg
+module.exports = {}
 
-    // we're in build mode so enable shared caching for Notion data
-    process.env.USE_CACHE = 'true'
-
-    const originalEntry = cfg.entry
-    cfg.entry = async () => {
-      const entries = { ...(await originalEntry()) }
-      entries['./scripts/build-rss.js'] = './src/lib/build-rss.ts'
-      entries['./scripts/build-sitemap.js'] = './src/lib/build-sitemap.ts'
-      return entries
-    }
-    return cfg
-  },
-}

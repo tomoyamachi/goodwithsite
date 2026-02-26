@@ -8,13 +8,4 @@
         <priority>0.80</priority>
     </url>
     
-    <url><loc>https://www.goodwith.tech/blog/deep-dive-into-docker-container-images</loc><priority>0.64</priority></url>
-    <url><loc>https://www.goodwith.tech/blog/create-secure-projects-in-golang</loc><priority>0.64</priority></url>
-    <url><loc>https://www.goodwith.tech/blog/go-pprof</loc><priority>0.64</priority></url>
-    <url><loc>https://www.goodwith.tech/blog/trivy-harbor-docker-enterprise</loc><priority>0.64</priority></url>
-    <url><loc>https://www.goodwith.tech/blog/hosting-helm-chart-private-repository-in-github-and-gitlab</loc><priority>0.64</priority></url>
-    <url><loc>https://www.goodwith.tech/blog/create-a-kubernetes-cluster-with-kubeadm-and-calico</loc><priority>0.64</priority></url>
-    <url><loc>https://www.goodwith.tech/blog/kubernetes-in-local</loc><priority>0.64</priority></url>
-    <url><loc>https://www.goodwith.tech/blog/how-to-host-static-site-by-cloud-storage</loc><priority>0.64</priority></url>
-    <url><loc>https://www.goodwith.tech/blog/the-way-to-build-your-corporate-sites-for-free</loc><priority>0.64</priority></url>
 </urlset>

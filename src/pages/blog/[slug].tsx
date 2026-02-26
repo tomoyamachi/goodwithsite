@@ -219,7 +219,7 @@ const RenderPost = ({ post, redirect, preview }) => {
             listTagName = null
           }
 
-          const renderHeading = (Type: string | React.ComponentType) => {
+          const renderHeading = (Type: React.ElementType) => {
             toRender.push(
               <Heading key={id}>
                 <Type key={id}>{textBlock(properties.title, true, id)}</Type>
@@ -344,11 +344,10 @@ const RenderPost = ({ post, redirect, preview }) => {
                     <ReactJSXParser
                       key={id}
                       jsx={content}
-                      components={components}
+                      components={components as any}
                       componentsOnly={false}
-                      renderInpost={false}
                       allowUnknownElements={true}
-                      blacklistedTags={['script', 'style']}
+                      disableKeyGeneration={true}
                     />
                   )
                 } else {

@@ -1,6 +1,11 @@
 import rpc from './rpc'
 
 export default async function getNotionUsers(ids: string[]) {
+  // IDが空の場合はAPI呼び出しをスキップ
+  if (!ids || ids.length === 0) {
+    return { users: {} }
+  }
+
   const { results = [] } = await rpc('getRecordValues', {
     requests: ids.map((id: string) => ({
       id,
