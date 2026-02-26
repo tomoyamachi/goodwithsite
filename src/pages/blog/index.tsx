@@ -38,11 +38,12 @@ export async function getStaticProps({ preview }) {
     post.Authors = post.Authors.map((id) => users[id].full_name)
   })
 
+  // Next.js 14ではundefinedのシリアライズが禁止されるため除去する
   return {
-    props: {
+    props: JSON.parse(JSON.stringify({
       preview: preview || false,
       posts,
-    },
+    })),
     revalidate: 10,
   }
 }

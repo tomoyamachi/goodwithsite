@@ -30,15 +30,28 @@ export default async function getBlogIndex(previews = true) {
       })
 
       // Parse table with posts
+      if (!data.recordMap || !data.recordMap.block) {
+        throw new Error(
+          'Invalid API response: recordMap.block is missing. Check NOTION_TOKEN.'
+        )
+      }
+
       const tableBlock = values(data.recordMap.block).find(
         (block: any) => block.value.type === 'collection_view'
       )
+
+      if (!tableBlock) {
+        throw new Error(
+          'No collection_view block found. Check BLOG_INDEX_ID.'
+        )
+      }
 
       postsTable = await getTableData(tableBlock, true)
     } catch (err) {
       console.warn(
         `Failed to load Notion posts, have you run the create-table script?`
       )
+      console.error(err)
       return {}
     }
 

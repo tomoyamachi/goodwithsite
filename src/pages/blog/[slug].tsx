@@ -59,10 +59,10 @@ export async function getStaticProps({ params: { slug }, preview }) {
   post.Authors = Object.keys(users).map((id) => users[id].full_name)
 
   return {
-    props: {
+    props: JSON.parse(JSON.stringify({
       post,
       preview: preview || false,
-    },
+    })),
     revalidate: 10,
   }
 }
