@@ -1,5 +1,49 @@
 # Notion Blog
 
+## NOTION_TOKEN 失効時の再取得手順
+
+このプロジェクトは Notion の非公式 API（`token_v2`）を使用しており、トークンには有効期限があります。ブログページが表示されなくなった場合、以下の手順でトークンを再取得してください。
+
+1. ブラウザで [notion.so](https://www.notion.so) にログイン
+2. DevTools を開く（`F12` または `Cmd+Option+I`）
+3. **Application** タブ → **Cookies** → `https://www.notion.so` を選択
+4. `token_v2` の値をコピー
+5. `.env` ファイルの `NOTION_TOKEN` を更新
+
+```
+NOTION_TOKEN=取得したtoken_v2の値
+```
+
+6. ローカルの場合は dev サーバーを再起動、Vercel の場合は下記の手順で環境変数を更新して再デプロイ
+
+> **注意**: トークンの値に `%3A` などの URL エンコードが含まれる場合は、デコード後の値（例: `v03:eyJ...`）を設定してください。
+
+### Vercel での TOKEN 更新・デプロイ手順
+
+1. [Vercel Dashboard](https://vercel.com/dashboard) でプロジェクトを開く
+2. **Settings** → **Environment Variables** に移動
+3. `NOTION_TOKEN` の値を新しい `token_v2` の値に更新
+4. 以下のいずれかの方法で再デプロイ
+   - **Dashboard から**: **Deployments** タブ → 最新のデプロイの `...` メニュー → **Redeploy**
+   - **CLI から**: `npx vercel --prod`
+
+### Vercel への初回デプロイ手順
+
+1. [Vercel](https://vercel.com) にサインアップ/ログイン
+2. GitHub リポジトリをインポート、またはローカルから `npx vercel` を実行
+3. **Settings** → **Environment Variables** で以下を設定
+
+| 変数名 | 値 | 説明 |
+|---|---|---|
+| `NOTION_TOKEN` | `token_v2` の値 | Notion の認証トークン |
+| `BLOG_INDEX_ID` | Notion テーブルのページ ID（32文字） | ブログ一覧のデータベース ID |
+
+4. デプロイ実行: `npx vercel --prod`
+
+> **BLOG_INDEX_ID の確認方法**: Notion でブログテーブルを開き、URL の末尾32文字（例: `https://www.notion.so/xxx/0ecdc2dbb7f24994b89558d96a232711?v=...` の `0ecdc2dbb7f24994b89558d96a232711`）
+
+---
+
 This is an example Next.js project that shows Next.js' upcoming SSG (static-site generation) support using Notion's **private** API for a backend.
 
 **Note**: This example uses the experimental SSG hooks only available in the Next.js canary branch! The APIs used within this example will change over time. Since it is using a private API and experimental features, use at your own risk as these things could change at any moment.
