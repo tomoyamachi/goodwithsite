@@ -92,7 +92,7 @@ const RenderPost = ({ post, redirect, preview }) => {
       key: string
       isNested?: boolean
       nested: string[]
-      children: React.ReactFragment
+      children: React.ReactNode
     }
   } = {}
 
