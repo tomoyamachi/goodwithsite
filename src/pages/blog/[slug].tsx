@@ -1,10 +1,9 @@
 import Link from 'next/link'
-import fetch from 'node-fetch'
 import { useRouter } from 'next/router'
 import Header from '../../components/layout/header'
 import Heading from '../../components/heading'
 import components from '../../components/dynamic'
-import ReactJSXParser from '@zeit/react-jsx-parser'
+import ReactJSXParser from 'react-jsx-parser'
 import blogStyles from '../../styles/blog.module.css'
 import { textBlock } from '../../lib/notion/renderers'
 import getPageData from '../../lib/notion/getPageData'
@@ -28,7 +27,7 @@ export async function getStaticProps({ params: { slug }, preview }) {
         redirect: '/blog',
         preview: false,
       },
-      unstable_revalidate: 5,
+      revalidate: 5,
     }
   }
   const postData = await getPageData(post.id)
@@ -144,8 +143,8 @@ const RenderPost = ({ post, redirect, preview }) => {
           <div className={blogStyles.previewAlert}>
             <b>Note:</b>
             {` `}Viewing in preview mode{' '}
-            <Link href={`/api/clear-preview?slug=${post.Slug}`}>
-              <button className={blogStyles.escapePreview}>Exit Preview</button>
+            <Link href={`/api/clear-preview?slug=${post.Slug}`} className={blogStyles.escapePreview}>
+              Exit Preview
             </Link>
           </div>
         </div>

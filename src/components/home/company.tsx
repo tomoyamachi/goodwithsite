@@ -48,9 +48,11 @@ export default () => (
           <h3 className="center">{title}</h3>
         </div>
         <table className={styles.tables}>
-          {tables[title].map((product, idx) => (
-            <Table {...product} key={idx} />
-          ))}
+          <tbody>
+            {tables[title].map((product, idx) => (
+              <Table {...product} key={idx} />
+            ))}
+          </tbody>
         </table>
       </div>
     ))}
@@ -60,10 +62,10 @@ export default () => (
         <h3 className="center">SKILLS</h3>
       </div>
       <div className={styles.skills}>
-        {skillMaps.map(skills => (
-          <div className={styles.skill}>
+        {skillMaps.map((skills, idx) => (
+          <div key={idx} className={styles.skill}>
             {skills.map(skill => (
-              <img alt={skill} src={`/skills/${skill}.png`} />
+              <img key={skill} alt={skill} src={`/skills/${skill}.png`} />
             ))}
           </div>
         ))}

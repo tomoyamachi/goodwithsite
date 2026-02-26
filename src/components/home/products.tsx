@@ -1,6 +1,6 @@
 import styles from './products.module.css'
+import buttonStyles from '../atoms/button.module.css'
 import Title from '../atoms/title'
-import Button from '../atoms/button'
 
 const products = {
   AUTHOR: [
@@ -42,7 +42,7 @@ const Products = ({ url, name, image, imageWidth }) => (
         <img src={image} width={imageWidth} />
       </div>
       <h4>{name}</h4>
-      <Button href={url}>LINK</Button>
+      <span className={buttonStyles.btn}>LINK</span>
     </a>
   </div>
 )

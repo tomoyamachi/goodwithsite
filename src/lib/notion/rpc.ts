@@ -1,4 +1,3 @@
-import fetch, { Response } from 'node-fetch'
 import { API_ENDPOINT, NOTION_TOKEN } from './server-constants'
 
 export default async function rpc(fnName: string, body: any) {
@@ -28,7 +27,11 @@ export async function getError(res: Response) {
 }
 
 export function getJSONHeaders(res: Response) {
-  return JSON.stringify(res.headers.raw())
+  const headers: Record<string, string> = {}
+  res.headers.forEach((value, key) => {
+    headers[key] = value
+  })
+  return JSON.stringify(headers)
 }
 
 export function getBodyOrNull(res: Response) {
