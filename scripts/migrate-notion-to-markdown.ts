@@ -137,7 +137,7 @@ async function main() {
         const frontmatter = [
           '---',
           `title: ${JSON.stringify(post.Page ?? '')}`,
-          `slug: ${post.Slug}`,
+          `slug: ${JSON.stringify(String(post.Slug))}`,
           `date: ${dateIso}`,
           authors.length
             ? `authors:\n${authors.map((a: string) => `  - ${a}`).join('\n')}`
