@@ -31,4 +31,10 @@ describe('posts loader', () => {
     const post = await getPostBySlug('nonexistent')
     expect(post).toBeNull()
   })
+
+  it('rewrites relative image paths to /blog-assets/<slug>/...', async () => {
+    const post = await getPostBySlug('sample-post')
+    expect(post!.html).toContain('/blog-assets/sample-post/dummy.png')
+    expect(post!.html).not.toContain('./dummy.png')
+  })
 })

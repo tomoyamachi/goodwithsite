@@ -20,3 +20,5 @@ description: テスト用のサンプル記事
 ```ts
 const hello = 'world'
 ```
+
+![dummy image](./dummy.png)

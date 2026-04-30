@@ -9,6 +9,7 @@ import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypePrismPlus from 'rehype-prism-plus'
 import rehypeStringify from 'rehype-stringify'
+import rehypeRelativeImages from './rehype-relative-images'
 
 export type PostMeta = {
   title: string
@@ -117,6 +118,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, { behavior: 'wrap' })
+    .use(rehypeRelativeImages, { slug: entry.meta.slug })
     .use(rehypePrismPlus, { ignoreMissing: true })
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(entry.body)
