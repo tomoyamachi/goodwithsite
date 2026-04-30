@@ -1,9 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-  <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Goodwith Blog</title>
-    <subtitle>We design DevSecOps on Containers.</subtitle>
-    <link href="/feed" rel="self" type="application/rss+xml"/>
-    <link href="/" />
-    <updated>2026-02-26T06:24:40.718Z</updated>
-    <id>Goodwith Blog</id>
-  </feed>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>GOODWITH LLC blog</title>
+  <subtitle>Posts from goodwith.tech</subtitle>
+  <link href="https://www.goodwith.tech/feed/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://www.goodwith.tech/" rel="alternate" type="text/html"/>
+  <id>https://www.goodwith.tech/</id>
+  <updated>2026-04-30T15:43:59.732Z</updated>
+  
+    <entry>
+      <id>https://www.goodwith.tech/blog/deep-dive-into-docker-container-images</id>
+      <title>Deep Dive into Docker Container Images</title>
+      <link href="https://www.goodwith.tech/blog/deep-dive-into-docker-container-images"/>
+      <updated>2020-04-07T00:00:00.000Z</updated>
+      <summary>Deep Dive into Docker Container Images</summary>
+      <author><name>Tomoya Amachi</name></author>
+    </entry>
+    <entry>
+      <id>https://www.goodwith.tech/blog/create-secure-projects-in-golang</id>
+      <title>Create secure projects in Golang</title>
+      <link href="https://www.goodwith.tech/blog/create-secure-projects-in-golang"/>
+      <updated>2020-03-22T00:00:00.000Z</updated>
+      <summary>Create secure projects in Golang</summary>
+      <author><name>Tomoya Amachi</name></author>
+    </entry>
+    <entry>
+      <id>https://www.goodwith.tech/blog/go-pprof</id>
+      <title>How I profiled Go code with pprof</title>
+      <link href="https://www.goodwith.tech/blog/go-pprof"/>
+      <updated>2020-03-17T00:00:00.000Z</updated>
+      <summary>How I profiled Go code with pprof</summary>
+      <author><name>Tomoya Amachi</name></author>
+    </entry>
+    <entry>
+      <id>https://www.goodwith.tech/blog/trivy-harbor-docker-enterprise</id>
+      <title>Trivy adopted by Harbor and Docker Enterprise</title>
+      <link href="https://www.goodwith.tech/blog/trivy-harbor-docker-enterprise"/>
+      <updated>2020-03-15T00:00:00.000Z</updated>
+      <summary>Trivy adopted by Harbor and Docker Enterprise</summary>
+      <author><name>Tomoya Amachi</name></author>
+    </entry>
+    <entry>
+      <id>https://www.goodwith.tech/blog/hosting-helm-chart-private-repository-in-github-and-gitlab</id>
+      <title>Hosting HELM chart private repositories in GitHub and GitLab</title>
+      <link href="https://www.goodwith.tech/blog/hosting-helm-chart-private-repository-in-github-and-gitlab"/>
+      <updated>2020-02-14T00:00:00.000Z</updated>
+      <summary>Hosting HELM chart private repositories in GitHub and GitLab</summary>
+      <author><name>Tomoya Amachi</name></author>
+    </entry>
+    <entry>
+      <id>https://www.goodwith.tech/blog/create-a-kubernetes-cluster-with-kubeadm-and-calico</id>
+      <title>Create a Kubernetes Cluster with Kubeadm and Calico on GCP instances</title>
+      <link href="https://www.goodwith.tech/blog/create-a-kubernetes-cluster-with-kubeadm-and-calico"/>
+      <updated>2020-02-10T00:00:00.000Z</updated>
+      <summary>Create a Kubernetes Cluster with Kubeadm and Calico on GCP instances</summary>
+      <author><name>Tomoya Amachi</name></author>
+    </entry>
+    <entry>
+      <id>https://www.goodwith.tech/blog/kubernetes-in-local</id>
+      <title>Create Development Environment with Kubernetes Clusters in your mac (with MySQL, ElasticSearch)</title>
+      <link href="https://www.goodwith.tech/blog/kubernetes-in-local"/>
+      <updated>2018-06-10T00:00:00.000Z</updated>
+      <summary>Create Development Environment with Kubernetes Clusters in your mac (with MySQL, ElasticSearch)</summary>
+      <author><name>Tomoya Amachi</name></author>
+    </entry>
+    <entry>
+      <id>https://www.goodwith.tech/blog/how-to-host-static-site-by-cloud-storage</id>
+      <title>How to host static site by Google Cloud Storage</title>
+      <link href="https://www.goodwith.tech/blog/how-to-host-static-site-by-cloud-storage"/>
+      <updated>2018-02-22T00:00:00.000Z</updated>
+      <summary>How to host static site by Google Cloud Storage</summary>
+      <author><name>Tomoya Amachi</name></author>
+    </entry>
+    <entry>
+      <id>https://www.goodwith.tech/blog/the-way-to-build-your-corporate-sites-for-free</id>
+      <title>The way to build your corporate sites for free</title>
+      <link href="https://www.goodwith.tech/blog/the-way-to-build-your-corporate-sites-for-free"/>
+      <updated>2017-08-27T00:00:00.000Z</updated>
+      <summary>The way to build your corporate sites for free</summary>
+      <author><name>Tomoya Amachi</name></author>
+    </entry>
+</feed>

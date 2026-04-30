@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# blog assets (built from content/blog/)
+/public/blog-assets/
+
 # production
 /build
 
@@ -29,5 +32,7 @@ yarn-error.log*
 
 .now
 .vercel
-.env*.local
+.env
+.env*
+!.env.example
 .gstack/

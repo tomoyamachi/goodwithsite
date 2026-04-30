@@ -8,43 +8,6 @@
   font-size: 14pt;
 }
 
-.previewAlertContainer {
-  display: flex;
-  justify-content: center;
-}
-
-.previewAlert {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  border: 1px solid #eaeaea;
-  width: 400px;
-  padding: 16px;
-  border-radius: 5px;
-}
-
-.escapePreview {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background-color: black;
-  border: 1px solid black;
-  color: white;
-  padding: 10px;
-  height: 24px;
-  border-radius: 5px;
-  transition: all 0.2s ease 0s;
-}
-.escapePreview:hover {
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-  cursor: pointer;
-}
-
 .titleContainer {
   display: inline-flex;
   align-items: center;
@@ -66,8 +29,9 @@
 
 .postPreview {
   max-width: 600px;
-  margin: 10px auto;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  margin: 10px auto 24px auto;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 .postPreview h3 {
   margin: 10px auto 0px auto;
@@ -75,8 +39,10 @@
 }
 
 .postPreview p {
-  font-size: 16px;
-  margin: 5px auto;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 8px auto 0 auto;
+  color: #333;
 }
 
 .postPreview:last-child {
@@ -146,4 +112,52 @@
 
 .post :global(a + p) {
   margin-top: 0;
+}
+
+/* Markdownレンダリング後のコードブロック */
+.post :global(pre) {
+  background: #2d2d2d;
+  color: #ccc;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+.post :global(pre code) {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+.post :global(code) {
+  background: #f4f4f4;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* rehype-prism-plus の token クラス（最小限の配色） */
+.post :global(.token.comment),
+.post :global(.token.prolog),
+.post :global(.token.doctype),
+.post :global(.token.cdata) {
+  color: #999;
+}
+.post :global(.token.keyword),
+.post :global(.token.boolean) {
+  color: #cc99cd;
+}
+.post :global(.token.string),
+.post :global(.token.attr-value) {
+  color: #7ec699;
+}
+.post :global(.token.number) {
+  color: #f08d49;
+}
+.post :global(.token.function),
+.post :global(.token.class-name) {
+  color: #f08d49;
+}
+.post :global(.token.operator),
+.post :global(.token.punctuation) {
+  color: #ccc;
 }
