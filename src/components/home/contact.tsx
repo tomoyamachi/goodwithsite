@@ -1,5 +1,6 @@
 import styles from './contact.module.css'
 import Title from '../atoms/title'
+import { buildMailtoLink } from './contactMailto'
 
 // 対応形態を明示し、依頼検討者が自分のニーズに合うか即座に判断できるようにする
 const engagementTypes = [
@@ -14,6 +15,31 @@ const engagementTypes = [
   {
     label: 'プロジェクト参画',
     detail: '実装フェーズへのハンズオン参画。設計から実装までを一貫して担う',
+  },
+]
+
+// 3チャネル並列の問い合わせ導線。気軽な接点を増やすため等価に並べる
+const contactChannels = [
+  {
+    title: '30分相談を予約',
+    detail: 'オンライン30分、Google Meet で対応します',
+    cta: '日程を選んで予約',
+    href: 'https://timerex.net/s/PLACEHOLDER',
+    external: true,
+  },
+  {
+    title: 'メールで連絡',
+    detail: '件名・本文テンプレート付き。社内共有・記録に向きます',
+    cta: 'メールを書く',
+    href: buildMailtoLink(),
+    external: false,
+  },
+  {
+    title: 'X DM で連絡',
+    detail: 'カジュアルなご質問・OSS 文脈のお声がけに',
+    cta: '@tomoyamachi へ送る',
+    href: 'https://x.com/tomoyamachi',
+    external: true,
   },
 ]
 
