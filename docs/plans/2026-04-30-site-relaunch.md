@@ -27,24 +27,28 @@ Scrapbox `about_GOODWITH` の良質なコンテンツ（取引先・OSS活動・
 
 ### サイト構造（TOP ページ）
 
+**方針**: ブログ以外は1ページで完結させる。詳細プロフィールも独立ページ（旧 `/about` 案）にせず、TOP の PROFILE セクションに統合する。
+
 ```
 1. Eyecatch（ファーストビュー）
    - キャッチコピー: 「コンテナセキュリティを設計から実装まで」
    - サブ英文: Container Security from design to implementation
    - 主要 CTA: 「お仕事のご相談」ボタン → CONTACT セクションへ
 
-2. PROFILE（代表者プロフィール）★新設
-   - 代表者: 天地 知也
-   - 一言: Trivy 初期コミッタ / Dockle 作者
-   - 簡単な略歴
-   - 認定資格バッジ（CISSP, CKAD/CKA/CKS, AWS, Azure, OCI）
-   - 詳細プロフィールへの内部リンク（後述の /about）
-
-3. PRODUCTS（OSS 活動）
+2. PRODUCTS（OSS 活動）
    - AUTHOR: Dockle, Dockertags
    - INITIAL COMMITTER: Trivy（強調）
    - COMMITTER: Vuls
-   - GitHub スター数表示（バッジ画像 or API 取得）
+
+3. PROFILE（代表者プロフィール）★新設
+   - 代表者: 天地 知也
+   - 一言: Trivy 初期コミッタ / Dockle 作者
+   - 認定資格バッジ（CISSP, CKAD/CKA/CKS, Linux, AWS, Azure, OCI）: 画像はサイト内 `public/certifications/` に保存し、credly 等の検証ページにリンク
+   - 登壇・執筆履歴（Scrapbox `about_GOODWITH` の主要項目を移植）
+   - 外部リンク: X, GitHub, Scrapbox（詳細はこちら）
+
+   ※ 略歴は当初案にあったが、Scrapbox 側で参照可能なため掲載しない（外部リンクで誘導）
+   ※ OSS 活動は PRODUCTS と内容が重複するため PROFILE には含めない
 
 4. SOLUTIONS（対応領域）
    - コンテナ / Kubernetes セキュリティの設計・実装
@@ -53,15 +57,14 @@ Scrapbox `about_GOODWITH` の良質なコンテンツ（取引先・OSS活動・
    - OSS ツール（Trivy / Dockle / Vuls）の導入・カスタマイズ支援
 
 5. WORKS（実績） ★新設
-   - 主要取引先（実名 or 業界記載）: 本田技研工業、ヤマハモーターソリューション、ディップ、ジーネクスト 等
-   - 代表的なプロジェクト（守秘範囲内で）
+   - 主要取引先（暫定は業界表記、実名掲載は各社確認後）: 自動車業界・人材業界・SaaS業界 等
    - 自社プロダクト: Security Issues in Popular Containers, FutureVuls
 
 6. CONTACT（お仕事のご相談） ★強化
    - 対応形態（顧問 / スポット / プロジェクト）
    - 守秘契約前提のメッセージ
    - 連絡先: メール、X DM、LinkedIn
-   - 問い合わせフォーム（任意、第二段階で実装）
+   - 問い合わせフォーム（任意、第三段階で実装）
 
 7. COMPANY（既存維持）
    - 会社情報、対応技術スタック
@@ -69,8 +72,9 @@ Scrapbox `about_GOODWITH` の良質なコンテンツ（取引先・OSS活動・
 
 ### 別ページ
 
-- `/about` (代表者詳細プロフィール、Scrapbox `about_GOODWITH` の本格移植先)
 - `/blog` (既存、Notion 連携、活性化は別議論)
+
+※ 当初案にあった `/about` は廃止。詳細プロフィールは TOP の PROFILE セクションに集約する。
 
 ## 実装フェーズ
 
@@ -94,20 +98,21 @@ Scrapbox `about_GOODWITH` の良質なコンテンツ（取引先・OSS活動・
 
 依頼検討者の不安を解消する材料を揃える。
 
-- [ ] PROFILE セクション新設（代表者プロフィール、認定資格バッジ）
-- [ ] WORKS セクション新設（主要取引先、自社プロダクト）
-  - 取引先実名掲載の可否を各社に確認
-    - 取引先各社（本田技研工業、ヤマハモーターソリューション、ディップ、ジーネクスト 等）に契約終了後の実績掲載可否を確認
-    - 問題ない場合: 「主要取引先」として実名掲載
-    - 問題ある場合: 「自動車業界」「人材業界」等の業界表記に変換
-- [ ] `/about` ページ新設（Scrapbox `about_GOODWITH` の本格移植）
-  - 略歴
-  - 資格・認定（credly リンク付き）
+- [ ] PROFILE セクションを TOP に新設
+  - 代表者プロフィール（天地 知也、Trivy 初期コミッタ / Dockle 作者）
+  - 認定資格バッジ: Scrapbox 同様にサムネイル+検証リンクで一覧表示
+    - 画像は `public/certifications/` に保存して使う（外部 hotlink しない）
+    - リンク先は credly / catalog-education / その他検証ページ
   - OSS活動（dockle, dockertags, Vuls, Trivy の役割と説明）
-  - 執筆/インタビュー（Software Design 11月号、Trivy買収裏話）
+  - 執筆/インタビュー（Software Design 11月号、Trivy買収裏話 等）
   - 登壇履歴（envoycon 2020、JAWS-UG、Go Conference、AVTOKYO 等）
+  - 外部詳細リンク: Scrapbox `about_GOODWITH`、X、GitHub
+- [ ] WORKS セクションを TOP に新設
+  - 暫定は業界表記で掲載（自動車業界・人材業界・SaaS業界 等）
+  - 取引先実名掲載の可否は各社確認後にプラン側で判断
+  - 自社プロダクト: Security Issues in Popular Containers, FutureVuls
 
-**完了基準**: 信用調査で十分な情報が取れる、Scrapbox を見にいく必要がなくなる。
+**完了基準**: 信用調査で十分な情報が取れる、Scrapbox を見にいかなくても主要情報が把握できる状態。
 
 ### フェーズ3: 仕上げ（任意、余力ベース）
 
@@ -138,10 +143,11 @@ Scrapbox `about_GOODWITH` の良質なコンテンツ（取引先・OSS活動・
 
 ### 新規作成ファイル
 
-- `src/components/home/profile.tsx` - PROFILE セクション
+- `src/components/home/profile.tsx` - PROFILE セクション（詳細プロフィール集約）
 - `src/components/home/works.tsx` - WORKS セクション
 - `src/components/home/contact.tsx` - CONTACT セクション
-- `src/pages/about.tsx` - 詳細プロフィールページ
+
+※ 当初案にあった `src/pages/about.tsx` は廃止（PROFILE セクションに集約）
 
 ### 取引先実名掲載の確認手順
 
@@ -166,7 +172,6 @@ Scrapbox `about_GOODWITH` の良質なコンテンツ（取引先・OSS活動・
 - [ ] X / GitHub から goodwith.tech にリンクして訪問テスト → 「相談したい」と思える内容になっているか自己評価
 - [ ] info@goodwith.tech のメール到達確認
 - [ ] OG画像が新しいキャッチコピーと整合している
-- [ ] sitemap.xml に新規ページが含まれる
 - [ ] 主要取引先の掲載可否確認が完了している（または業界表記に倒す決定がされている）
 
 ## 関連ドキュメント
