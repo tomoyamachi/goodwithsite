@@ -32,6 +32,36 @@ type RawEntry = {
   body: string
 }
 
+const DESCRIPTION_MAX_LENGTH = 160
+
+// Markdown本文から概要文（プレーンテキスト）を抽出する。
+// 見出し・コードブロック・画像・HTMLコメント等を除外し、最初の段落から最大160文字。
+function extractDescription(body: string): string {
+  const stripped = body
+    // コードブロックを除去
+    .replace(/```[\s\S]*?```/g, '')
+    // HTMLコメント（TODO残置等）を除去
+    .replace(/<!--[\s\S]*?-->/g, '')
+    // 見出し行を除去
+    .replace(/^#{1,6}\s.*$/gm, '')
+    // 画像参照を除去
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+    // インラインリンクをテキストのみに
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    // 強調記号を除去
+    .replace(/[*_~`]+/g, '')
+
+  const firstParagraph = stripped
+    .split(/\n\s*\n/)
+    .map((s) => s.trim())
+    .find((s) => s.length > 0)
+
+  if (!firstParagraph) return ''
+  const oneLine = firstParagraph.replace(/\s+/g, ' ').trim()
+  if (oneLine.length <= DESCRIPTION_MAX_LENGTH) return oneLine
+  return oneLine.slice(0, DESCRIPTION_MAX_LENGTH).trimEnd() + '…'
+}
+
 function readAllRaw(): RawEntry[] {
   if (!fs.existsSync(CONTENT_DIR)) return []
   const dirs = fs
@@ -70,6 +100,10 @@ function readAllRaw(): RawEntry[] {
       )
     }
 
+    const description = fm.description?.trim()
+      ? fm.description
+      : extractDescription(parsed.content)
+
     entries.push({
       dirName: d.name,
       meta: {
@@ -78,7 +112,7 @@ function readAllRaw(): RawEntry[] {
         date: dateStr,
         authors: fm.authors ?? [],
         published: fm.published ?? false,
-        description: fm.description ?? '',
+        description,
       },
       body: parsed.content,
     })
