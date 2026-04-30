@@ -78,39 +78,40 @@ Scrapbox `about_GOODWITH` の良質なコンテンツ（取引先・OSS活動・
 
 ## 実装フェーズ
 
-### フェーズ1: 最小限の問い合わせ導線整備（最優先・1〜2日）
+### フェーズ1: 最小限の問い合わせ導線整備（完了 / PR #37）
 
 戦略の核（インバウンド導線）を最短で立てる。デザイン刷新やコンテンツ充実は後回し。
 
-- [ ] Eyecatch の H1 を日本語+英語併記に変更（`We design DevSecOps on Containers` → 「コンテナセキュリティを設計から実装まで」+ 英語サブ）
-- [ ] Eyecatch の「MORE」ボタンを「お仕事のご相談」に変更し、CONTACT セクションへリンク
-- [ ] CONTACT セクションを新設（または Footer の連絡先を強化）
-  - 対応形態の明示
+- [x] Eyecatch の H1 を日本語+英語併記に変更（`We design DevSecOps on Containers` → 「コンテナセキュリティを設計から実装まで」+ 英語サブ）
+- [x] Eyecatch の「MORE」ボタンを「お仕事のご相談」に変更し、CONTACT セクションへリンク
+- [x] CONTACT セクションを新設
+  - 対応形態の明示（顧問契約 / スポット相談 / プロジェクト参画）
   - メール（info@goodwith.tech）の明示
-  - X DM・LinkedIn へのリンク
+  - X DM へのリンク（LinkedIn は本人があまり使っていないため掲載見送り）
   - 「守秘契約前提でお話を伺います」の一文
-- [ ] SOLUTIONS の3項目（Consultation/Development/Management）を、4項目（コンテナK8s / クラウド / 脆弱性管理 / OSSツール）に書き換え
-- [ ] PRODUCTS の Trivy 表記を「INITIAL COMMITTER」として強調
+- [x] SOLUTIONS の3項目（Consultation/Development/Management）を、4項目（コンテナK8s / クラウド / 脆弱性管理 / OSSツール）に書き換え
+- [x] PRODUCTS の Trivy 表記を「INITIAL COMMITTER」として強調（4プロダクトを横並びカードに再編し、Trivy のみグラデ強調）
 
 **完了基準**: X プロフィール・GitHub から goodwith.tech にリンクを貼った時、訪問者が「この人にコンテナセキュリティの相談ができる」と即座に理解できる状態。
 
-### フェーズ2: コンテンツ充実（中期、1〜2週間）
+### フェーズ2: コンテンツ充実（完了 / PR #37）
 
 依頼検討者の不安を解消する材料を揃える。
 
-- [ ] PROFILE セクションを TOP に新設
+- [x] PROFILE セクションを TOP に新設
   - 代表者プロフィール（天地 知也、Trivy 初期コミッタ / Dockle 作者）
-  - 認定資格バッジ: Scrapbox 同様にサムネイル+検証リンクで一覧表示
-    - 画像は `public/certifications/` に保存して使う（外部 hotlink しない）
-    - リンク先は credly / catalog-education / その他検証ページ
-  - OSS活動（dockle, dockertags, Vuls, Trivy の役割と説明）
-  - 執筆/インタビュー（Software Design 11月号、Trivy買収裏話 等）
-  - 登壇履歴（envoycon 2020、JAWS-UG、Go Conference、AVTOKYO 等）
+  - 認定資格バッジ15件: Scrapbox 同様にサムネイル+検証リンクで一覧表示
+    - 画像は `public/certifications/` に保存（外部 hotlink しない）
+    - リンク先は credly / catalog-education
+  - 執筆/インタビュー2件・登壇履歴13件をサムネイル+リンクで掲載
   - 外部詳細リンク: Scrapbox `about_GOODWITH`、X、GitHub
-- [ ] WORKS セクションを TOP に新設
+  - ※ OSS 活動は PRODUCTS と内容が重複するため PROFILE には含めない
+  - ※ 略歴は Scrapbox 側で参照可能なため掲載しない（外部リンクで誘導）
+- [x] WORKS セクションを TOP に新設
   - 暫定は業界表記で掲載（自動車業界・人材業界・SaaS業界 等）
-  - 取引先実名掲載の可否は各社確認後にプラン側で判断
+  - 取引先実名掲載の可否は各社確認後にプラン側で判断（残課題）
   - 自社プロダクト: Security Issues in Popular Containers, FutureVuls
+- [x] COMPANY を整理（PROFILE と重複する CEO/Operations を削除し、商号・設立のみに。SKILLS セクション撤去）
 
 **完了基準**: 信用調査で十分な情報が取れる、Scrapbox を見にいかなくても主要情報が把握できる状態。
 
