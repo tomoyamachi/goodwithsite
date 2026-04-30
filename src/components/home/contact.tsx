@@ -43,18 +43,6 @@ const contactChannels = [
   },
 ]
 
-const contacts = [
-  {
-    label: 'Email',
-    value: 'info@goodwith.tech',
-    href: 'mailto:info@goodwith.tech',
-  },
-  {
-    label: 'X (Twitter) DM',
-    value: '@tomoyamachi',
-    href: 'https://x.com/tomoyamachi',
-  },
-]
 
 export default () => (
   <div className={styles.contact}>
@@ -83,14 +71,23 @@ export default () => (
 
     <div className={styles.channelsWrap}>
       <h3 className={styles.subhead}>連絡先</h3>
-      <ul className={styles.channels}>
-        {contacts.map(c => (
-          <li key={c.label}>
-            <span className={styles.channelLabel}>{c.label}</span>
-            <a href={c.href}>{c.value}</a>
-          </li>
+      <div className={styles.channelGrid}>
+        {contactChannels.map(c => (
+          <div key={c.title} className={styles.channelCard}>
+            <h4>{c.title}</h4>
+            <p>{c.detail}</p>
+            <a
+              href={c.href}
+              className={styles.channelButton}
+              {...(c.external
+                ? { target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
+            >
+              {c.cta} →
+            </a>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   </div>
 )
