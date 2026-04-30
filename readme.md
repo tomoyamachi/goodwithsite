@@ -75,18 +75,6 @@ description: 一覧・OG・RSS 用の概要（任意）
 npm test
 ```
 
-## 環境変数
-
-現状、ビルド時・ランタイム共に必須の環境変数はない（Notion 依存は撤去済み）。
-
-### Vercel ダッシュボードのクリーンアップ（移行直後の手作業）
-
-過去の Notion 連携で設定されていた以下を削除すること：
-
-- `NOTION_TOKEN`
-- `BLOG_INDEX_ID`
-- `USE_CACHE`
-
 ## ディレクトリ構成
 
 ```
