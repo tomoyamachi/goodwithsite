@@ -60,35 +60,6 @@
   max-width: 760px;
   margin: 0 auto;
 }
-
-.channels {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-}
-
-.channels li {
-  display: flex;
-  align-items: center;
-  padding: 16px 22px;
-  border-bottom: 1px solid #eee;
-  font-size: 0.95rem;
-}
-
-.channels li:last-child {
-  border-bottom: none;
-}
-
-.channelLabel {
-  flex: 0 0 130px;
-  color: #888;
-  font-weight: bold;
-  font-size: 0.9rem;
-}
-
 /* 3チャネル連絡先カードのグリッドレイアウト */
 .channelGrid {
   display: grid;
