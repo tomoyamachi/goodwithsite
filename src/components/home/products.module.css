@@ -1,63 +1,95 @@
 .products {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  width: 920px;
-  max-width: calc(100vw - var(--gap-double));
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1080px;
+  margin: 40px auto 60px;
+  padding: 0 16px;
 }
 
 .product {
-  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  display: inline-flex;
-  padding: 0 0.5rem 0.5rem;
-  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 16px 12px;
+  transition: 0.2s;
 }
 
-.product h4 {
-  margin: 1.3rem 0;
+.product:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: rgb(32, 150, 163);
 }
 
+.product a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* 役割ラベル: カード上部にバッジ表示 */
 .role {
-  padding: 10px 0;
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #fff;
+  background: rgb(32, 150, 163);
+  padding: 3px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
 }
 
-.role h3 {
-  font-weight: bold;
-  font-size: 20pt;
-  color: #2096a3;
-  color: rgb(32, 150, 163);
-  margin: 47px 0 66px;
+/* INITIAL COMMITTER (Trivy) は強調 */
+.highlight {
+  background: linear-gradient(60deg, rgba(50, 158, 170, 0.06) 0%, rgba(221, 220, 138, 0.06) 100%);
+  border-color: rgb(32, 150, 163);
+}
+
+.highlight .role {
+  background: linear-gradient(60deg, #329eaa 30%, #dddc8a 100%);
 }
 
 .productImage {
-  height: 155px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
 }
 
 .productImage img {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
+.product h4 {
+  margin: 0 0 14px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+/* タブレット: 2列 */
+@media (max-width: 900px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* スマホ: 1列 */
 @media (max-width: 600px) {
-  .product div {
-    flex-basis: auto;
-    padding-left: 0;
+  .products {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
-
   .productImage {
-    height: auto;
-    width: 300px;
-    padding: 10px;
-  }
-
-  .productImage img {
-    position: relative;
-    top: auto;
-    transform: none;
+    height: 110px;
   }
 }

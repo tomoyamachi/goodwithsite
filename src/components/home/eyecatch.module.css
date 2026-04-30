@@ -6,25 +6,80 @@
     grid-template-areas: 'content image';
     max-width: 1500px;
     margin: 0 auto 150px;
+    align-items: center;
   }
 }
 
 .content {
   grid-area: content;
-  grid-column: 0/3;
-  padding-top: 130px;
-}
-.body {
-  margin: auto;
+  padding: 80px 24px 0;
   text-align: center;
-  padding: 10px;
+}
+
+/* 日本語キャッチコピー: 2行に分割表示し、改行制御を行う */
+.headline {
+  font-size: 26pt;
+  line-height: 1.4;
+  margin: 0 0 14px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.headlineLine {
+  display: block;
+  white-space: nowrap;
+}
+
+/* 英語サブ */
+.subHeadline {
+  font-size: 12pt;
+  color: #888;
+  margin: 0 0 28px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.body {
+  text-align: center;
 }
 
 .image {
   grid-area: image;
-  grid-column: 2/3;
 }
 
 .image img {
-  width: 596px;
+  width: 100%;
+  max-width: 596px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 中型: 文字を少し縮める */
+@media (max-width: 1024px) {
+  .headline {
+    font-size: 22pt;
+  }
+}
+
+/* スマホ表示で文字が破綻しないよう調整 */
+@media (max-width: 600px) {
+  .content {
+    padding: 24px 16px 0;
+    text-align: center;
+  }
+  .headline {
+    font-size: 18pt;
+    margin-bottom: 10px;
+  }
+  .subHeadline {
+    font-size: 10pt;
+    margin-bottom: 20px;
+  }
+  .body {
+    text-align: center;
+  }
+  .image img {
+    width: 100%;
+  }
 }

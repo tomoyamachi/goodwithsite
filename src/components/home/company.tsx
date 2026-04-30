@@ -1,34 +1,19 @@
 import styles from './company.module.css'
 import Title from '../atoms/title'
 
+// 法人特有情報のみ掲載。代表者名・事業内容は PROFILE / Eyecatch / SOLUTIONS と重複するため除外
 const tables = {
-  COORPORATE: [
+  CORPORATE: [
     {
-      label: 'Name',
-      val: 'GOODWITH LLC.,',
+      label: '商号',
+      val: '合同会社グッドウィズ (GOODWITH LLC.,)',
     },
     {
-      label: 'Established',
-      val: '07/01/2016',
-    },
-    {
-      label: 'CEO',
-      val: 'Tomoya AMACHI',
-    },
-    {
-      label: 'Operations',
-      val: 'IT-based consulting solutions, especialy Container x Security.',
+      label: '設立',
+      val: '2016年7月1日',
     },
   ],
 }
-
-const skillMaps = [
-  ['GCP', 'AWS', 'Azure'],
-  ['Go', 'TypeScript', 'Python', 'PHP'],
-  ['Docker', 'Kubernetes'],
-  ['AquaSecurity', 'Sysdig', 'Twistlock'],
-  ['MySQL', 'PostgreSQL', 'OracleDatabase'],
-]
 
 const Table = ({ label, val }) => (
   <tr>
@@ -56,20 +41,5 @@ export default () => (
         </table>
       </div>
     ))}
-
-    <div key="skills">
-      <div className={styles.role}>
-        <h3 className="center">SKILLS</h3>
-      </div>
-      <div className={styles.skills}>
-        {skillMaps.map((skills, idx) => (
-          <div key={idx} className={styles.skill}>
-            {skills.map(skill => (
-              <img key={skill} alt={skill} src={`/skills/${skill}.png`} />
-            ))}
-          </div>
-        ))}
-      </div>
-    </div>
   </div>
 )
