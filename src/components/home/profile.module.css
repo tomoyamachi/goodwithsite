@@ -1,0 +1,172 @@
+.profile {
+  max-width: 940px;
+  margin: 60px auto 80px;
+  padding: 0 16px;
+}
+
+/* 代表者の名前と一言 */
+.head {
+  text-align: center;
+  margin: 24px 0 36px;
+}
+
+.name {
+  font-size: 22pt;
+  margin: 0 0 8px;
+  color: #333;
+}
+
+.tagline {
+  font-size: 14pt;
+  color: #2096a3;
+  color: rgb(32, 150, 163);
+  font-weight: bold;
+  margin: 0 0 6px;
+}
+
+.role {
+  font-size: 0.95rem;
+  color: #888;
+  margin: 0;
+}
+
+.section {
+  margin: 32px 0;
+}
+
+.subhead {
+  font-size: 13pt;
+  color: #2096a3;
+  color: rgb(32, 150, 163);
+  font-weight: bold;
+  margin: 0 0 18px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* 認定資格バッジ: PRODUCTS のアイコン枠 (120px) に揃える */
+.badgeGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  padding: 6px;
+  border-radius: 10px;
+  text-decoration: none;
+  background: #fff;
+  transition: 0.2s;
+}
+
+a.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.badge img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* 登壇/執筆カード: サムネイル高さも 120px に揃える */
+.thumbGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.thumbCard {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s;
+}
+
+.thumbCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: rgb(32, 150, 163);
+}
+
+.thumbImage {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.thumbImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumbTitle {
+  padding: 12px 14px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* 外部リンク */
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.linkList li a {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid rgb(32, 150, 163);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.linkList li a:hover {
+  background: rgb(32, 150, 163);
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .name {
+    font-size: 18pt;
+  }
+  .tagline {
+    font-size: 12pt;
+  }
+  .badge {
+    width: 96px;
+    height: 96px;
+  }
+  .thumbGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .thumbImage {
+    height: 100px;
+  }
+  .thumbTitle {
+    font-size: 0.8rem;
+    padding: 10px 12px;
+  }
+}
