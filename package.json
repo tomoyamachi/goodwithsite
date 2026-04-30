@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "next build && USE_CACHE=true npx tsx ./src/lib/build-rss.ts && USE_CACHE=true npx tsx ./src/lib/build-sitemap.ts",
+    "prebuild": "npx tsx scripts/copy-blog-assets.ts",
+    "build": "next build && npx tsx ./src/lib/build-rss.ts && npx tsx ./src/lib/build-sitemap.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore",
