@@ -87,13 +87,14 @@ Scrapbox は維持しつつ、**法人サイトを依頼検討者の主要な着
 
 - Next.js 14 / TypeScript
 - Vercel ホスティング、`npm run build` でビルド
-- Notion トークンは `.env` 管理（失効時の再取得手順は `readme.md` 参照）
+- ブログは `content/blog/<YYYY-MM-DD-slug>/index.md` のローカル Markdown で管理（Notion 依存は撤去済み）
+- 必須の環境変数はなし
 
 ### コーディング規約
 
 - macOS 全プロジェクト共通の `~/.claude/CLAUDE.md` に従う
 - 日本語コメント推奨、変数名はキャメルケース
-- 機密情報（API キー・Notion トークン等）はコードに含めない、`.env` のみ
+- 機密情報はコードに含めない、`.env` のみ（`.env` は `.gitignore` 済み）
 
 ### Git運用
 
