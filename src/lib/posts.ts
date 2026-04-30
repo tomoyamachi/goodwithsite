@@ -44,7 +44,9 @@ function readAllRaw(): RawEntry[] {
     if (!fs.existsSync(filePath)) continue
     const raw = fs.readFileSync(filePath, 'utf8')
     const parsed = matter(raw)
-    const fm = parsed.data as Partial<PostMeta> & { date?: string | Date }
+    const fm = parsed.data as Partial<Omit<PostMeta, 'date'>> & {
+      date?: unknown
+    }
 
     if (!fm.title || !fm.slug || !fm.date) {
       throw new Error(
