@@ -14,10 +14,41 @@ export default async function rpc(fnName: string, body: any) {
   })
 
   if (res.ok) {
-    return res.json()
+    const json = await res.json()
+    // Notion APIのrecordMap形式が { value: { value: {...}, role } } に変わったので
+    // 旧来の { value: {...}, role } 形に正規化して、呼び出し側の互換を保つ
+    if (json && typeof json === 'object' && json.recordMap) {
+      json.recordMap = normalizeRecordMap(json.recordMap)
+    }
+    return json
   } else {
     throw new Error(await getError(res))
   }
+}
+
+// recordMap内の各エントリを { value: {...}, role } 形式に正規化する。
+// 新スキーマ: { spaceId?, value: { value: {...}, role } } → { value: {...}, role }
+function normalizeRecordMap(recordMap: any) {
+  if (!recordMap || typeof recordMap !== 'object') return recordMap
+
+  for (const tableKey of Object.keys(recordMap)) {
+    if (tableKey === '__version__') continue
+    const table = recordMap[tableKey]
+    if (!table || typeof table !== 'object') continue
+
+    for (const id of Object.keys(table)) {
+      const entry = table[id]
+      if (
+        entry &&
+        entry.value &&
+        entry.value.value &&
+        entry.value.role !== undefined
+      ) {
+        table[id] = entry.value
+      }
+    }
+  }
+  return recordMap
 }
 
 export async function getError(res: Response) {
