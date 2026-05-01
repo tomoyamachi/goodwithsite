@@ -1,5 +1,6 @@
 import styles from './contact.module.css'
 import Title from '../atoms/title'
+import { buildMailtoLink } from './contactMailto'
 
 // 対応形態を明示し、依頼検討者が自分のニーズに合うか即座に判断できるようにする
 const engagementTypes = [
@@ -17,18 +18,31 @@ const engagementTypes = [
   },
 ]
 
-const contacts = [
+// 3チャネル並列の問い合わせ導線。気軽な接点を増やすため等価に並べる
+const contactChannels = [
   {
-    label: 'Email',
-    value: 'info@goodwith.tech',
-    href: 'mailto:info@goodwith.tech',
+    title: '15分相談を予約',
+    detail: 'オンライン15分から、Google Meet 等で対応します（指定可・延長可）',
+    cta: '日程を選んで予約',
+    href: 'https://timerex.net/s/tomoya.amachi_2469/e962a2ce',
+    external: true,
   },
   {
-    label: 'X (Twitter) DM',
-    value: '@tomoyamachi',
+    title: 'メールで連絡',
+    detail: '件名・本文テンプレート付き。社内共有・記録に向きます',
+    cta: 'メールを書く',
+    href: buildMailtoLink(),
+    external: false,
+  },
+  {
+    title: 'X DM で連絡',
+    detail: 'カジュアルなご質問・OSS 文脈のお声がけに',
+    cta: '@tomoyamachi へ送る',
     href: 'https://x.com/tomoyamachi',
+    external: true,
   },
 ]
+
 
 export default () => (
   <div className={styles.contact}>
@@ -57,14 +71,23 @@ export default () => (
 
     <div className={styles.channelsWrap}>
       <h3 className={styles.subhead}>連絡先</h3>
-      <ul className={styles.channels}>
-        {contacts.map(c => (
-          <li key={c.label}>
-            <span className={styles.channelLabel}>{c.label}</span>
-            <a href={c.href}>{c.value}</a>
-          </li>
+      <div className={styles.channelGrid}>
+        {contactChannels.map(c => (
+          <div key={c.title} className={styles.channelCard}>
+            <h4>{c.title}</h4>
+            <p>{c.detail}</p>
+            <a
+              href={c.href}
+              className={styles.channelButton}
+              {...(c.external
+                ? { target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
+            >
+              {c.cta} →
+            </a>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   </div>
 )

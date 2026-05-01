@@ -57,48 +57,66 @@
 }
 
 .channelsWrap {
-  max-width: 760px;
+  max-width: 940px;
   margin: 0 auto;
 }
+/* 3チャネル連絡先カードのグリッドレイアウト */
+.channelGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
 
-.channels {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* 各チャネルカード */
+.channelCard {
   background: #fff;
+  padding: 22px 20px;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-}
-
-.channels li {
   display: flex;
-  align-items: center;
-  padding: 16px 22px;
-  border-bottom: 1px solid #eee;
-  font-size: 0.95rem;
+  flex-direction: column;
 }
 
-.channels li:last-child {
-  border-bottom: none;
-}
-
-.channelLabel {
-  flex: 0 0 130px;
-  color: #888;
+/* カードのチャネル名見出し */
+.channelCard h4 {
+  margin: 0 0 10px;
+  color: #2096a3;
+  color: rgb(32, 150, 163);
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 14pt;
 }
 
+/* カードの説明文 */
+.channelCard p {
+  margin: 0 0 18px;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+/* チャネルへのリンクボタン */
+.channelButton {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 8px 16px;
+  border: 1px solid #2096a3;
+  border-radius: 4px;
+  color: #2096a3;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+/* ボタンホバー状態 */
+.channelButton:hover {
+  background: #2096a3;
+  color: #fff;
+}
+
+/* モバイル: engagementGrid と channelGrid を 1カラム化 */
 @media (max-width: 600px) {
-  .engagementGrid {
+  .engagementGrid,
+  .channelGrid {
     grid-template-columns: 1fr;
-  }
-  .channels li {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-  .channelLabel {
-    flex: none;
   }
 }
