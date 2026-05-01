@@ -18,32 +18,6 @@ const engagementTypes = [
   },
 ]
 
-// 3チャネル並列の問い合わせ導線。気軽な接点を増やすため等価に並べる
-const contactChannels = [
-  {
-    title: '15分相談を予約',
-    detail: 'オンライン15分から、Google Meet 等で対応します（指定可・延長可）',
-    cta: '日程を選んで予約',
-    href: 'https://timerex.net/s/tomoya.amachi_2469/e962a2ce',
-    external: true,
-  },
-  {
-    title: 'メールで連絡',
-    detail: '件名・本文テンプレート付き。社内共有・記録に向きます',
-    cta: 'メールを書く',
-    href: buildMailtoLink(),
-    external: false,
-  },
-  {
-    title: 'X DM で連絡',
-    detail: 'カジュアルなご質問・OSS 文脈のお声がけに',
-    cta: '@tomoyamachi へ送る',
-    href: 'https://x.com/tomoyamachi',
-    external: true,
-  },
-]
-
-
 export default () => (
   <div className={styles.contact}>
     <Title id="contact">CONTACT</Title>
@@ -72,21 +46,39 @@ export default () => (
     <div className={styles.channelsWrap}>
       <h3 className={styles.subhead}>連絡先</h3>
       <div className={styles.channelGrid}>
-        {contactChannels.map(c => (
-          <div key={c.title} className={styles.channelCard}>
-            <h4>{c.title}</h4>
-            <p>{c.detail}</p>
-            <a
-              href={c.href}
-              className={styles.channelButton}
-              {...(c.external
-                ? { target: '_blank', rel: 'noopener noreferrer' }
-                : {})}
-            >
-              {c.cta} →
-            </a>
-          </div>
-        ))}
+        <div className={styles.channelCard}>
+          <h4>15分相談を予約</h4>
+          <p>オンライン15分から、Google Meet 等で対応します（指定可・延長可）</p>
+          <a
+            href="https://timerex.net/s/tomoya.amachi_2469/e962a2ce"
+            className={styles.channelButton}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            日程を選んで予約 →
+          </a>
+        </div>
+
+        <div className={styles.channelCard}>
+          <h4>メールで連絡</h4>
+          <p>件名・本文の雛形が入った状態でメーラーが開きます。社内共有・記録に向きます。</p>
+          <a href={buildMailtoLink()} className={styles.channelButton}>
+            メールを書く →
+          </a>
+        </div>
+
+        <div className={styles.channelCard}>
+          <h4>X DM で連絡</h4>
+          <p>カジュアルなご質問・OSS 文脈のお声がけに</p>
+          <a
+            href="https://x.com/tomoyamachi"
+            className={styles.channelButton}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @tomoyamachi へ送る →
+          </a>
+        </div>
       </div>
     </div>
   </div>

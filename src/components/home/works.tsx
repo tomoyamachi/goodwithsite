@@ -17,18 +17,40 @@ const clients = [
   },
 ]
 
+// 関連プロダクトは PRODUCTS と同形式のカード（スクリーンショット画像 + 役割ラベル + サービス名）
+// FutureVuls は画像=サービス公式 (vuls.biz)、リンク=解説記事 (Qiita) という方針
 const products = [
   {
+    role: '自社プロダクト',
     name: 'Security Issues in Popular Containers',
-    detail: '主要なコンテナイメージのセキュリティ実態を分析・公開する自社プロダクト',
-    url: null,
+    detail: '主要なコンテナイメージのセキュリティ実態を分析・公開',
+    url: 'https://containers.goodwith.tech/',
+    image: '/works/security-issues.png',
   },
   {
+    role: '寄稿・貢献',
     name: 'FutureVuls',
     detail: 'Vuls をベースとした脆弱性管理サービスへの貢献（Future Architect 株式会社）',
-    url: 'https://vuls.biz/',
+    url: 'https://qiita.com/tomoyamachi/items/ce0c9ecb36f968e3324b',
+    image: '/works/futurevuls.png',
   },
 ]
+
+const ProductCard = ({ url, name, detail, image, role }) => (
+  <a
+    className={styles.productCard}
+    href={url}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span className={styles.role}>{role}</span>
+    <div className={styles.productImage}>
+      <img src={image} alt={name} loading="lazy" />
+    </div>
+    <h4>{name}</h4>
+    <p>{detail}</p>
+  </a>
+)
 
 export default () => (
   <div className={styles.works}>
@@ -51,20 +73,11 @@ export default () => (
 
     <div className={styles.section}>
       <h3 className={styles.subhead}>関連プロダクト</h3>
-      <ul className={styles.productList}>
+      <div className={styles.productGrid}>
         {products.map(p => (
-          <li key={p.name}>
-            {p.url ? (
-              <a href={p.url} target="_blank" rel="noopener noreferrer">
-                <strong>{p.name}</strong>
-              </a>
-            ) : (
-              <strong>{p.name}</strong>
-            )}
-            <span className={styles.productDetail}>{p.detail}</span>
-          </li>
+          <ProductCard key={p.name} {...p} />
         ))}
-      </ul>
+      </div>
     </div>
   </div>
 )

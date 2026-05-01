@@ -1,5 +1,4 @@
 import styles from './products.module.css'
-import buttonStyles from '../atoms/button.module.css'
 import Title from '../atoms/title'
 
 // OSS への関わり: 役割を各カードのラベルとして表示し、横並び1行で見せる
@@ -47,7 +46,6 @@ const Product = ({ url, name, image, imageWidth, role, highlight }) => (
         <img src={image} width={imageWidth} alt={name} />
       </div>
       <h4>{name}</h4>
-      <span className={buttonStyles.btn}>LINK</span>
     </a>
   </div>
 )

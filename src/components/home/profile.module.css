@@ -123,28 +123,32 @@ a.badge:hover {
   color: #333;
 }
 
-/* 外部リンク */
-.linkList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* ソーシャルアイコン: 代表者名の直下に2-3個並べる */
+.socials {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 12px;
 }
 
-.linkList li a {
-  display: inline-block;
-  padding: 8px 16px;
-  border: 1px solid rgb(32, 150, 163);
-  border-radius: 6px;
-  font-size: 0.9rem;
+.socialIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: #888;
   transition: 0.2s;
 }
 
-.linkList li a:hover {
-  background: rgb(32, 150, 163);
-  color: #fff;
+.socialIcon:hover {
+  color: rgb(32, 150, 163);
+  transform: translateY(-1px);
+}
+
+.socialIcon svg {
+  fill: currentColor;
 }
 
 @media (max-width: 600px) {
