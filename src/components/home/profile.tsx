@@ -28,7 +28,7 @@ const certifications = [
 // 執筆/インタビュー: Scrapbox 同様にサムネイル付き
 const writings = [
   {
-    title: 'Software Design 2019年11月号 寄稿',
+    title: 'Software Design 2019年11月号寄稿',
     image: '/writings/software-design-201911.png',
     href: 'https://gihyo.jp/magazine/SD/archive/2019/201911',
   },
@@ -42,7 +42,7 @@ const writings = [
 // 登壇履歴: Scrapbox の発表順を維持
 const talks = [
   {
-    title: '第43回 Tokyo Jazug Night「Azureで守るマルチクラウド」',
+    title: '第43回Tokyo Jazug Night「Azureで守るマルチクラウド」',
     image: '/talks/tokyo-jazug-43.png',
     href: 'https://jazug.connpass.com/event/275503/',
   },
@@ -102,7 +102,7 @@ const talks = [
     href: 'https://vuls-jp.connpass.com/event/131960/',
   },
   {
-    title: 'やっぱり AppEngine ja night #2',
+    title: 'やっぱりAppEngine ja night #2',
     image: '/talks/appengine-ja-night-2.png',
     href: 'https://gaeja.connpass.com/event/68702/',
   },
@@ -146,9 +146,9 @@ export default () => (
       <div className={styles.headMain}>
         <h3 className={styles.name}>天地 知也 / Tomoya AMACHI</h3>
         <p className={styles.tagline}>
-          Trivy 初期コミッタ / Dockle 作者
+          Trivy初期コミッタ / Dockle作者
         </p>
-        <p className={styles.role}>GOODWITH LLC 代表</p>
+        <p className={styles.role}>GOODWITH LLC代表</p>
         <div className={styles.socials}>
           {socialLinks.map(({ label, href, Icon }) => (
             <a
