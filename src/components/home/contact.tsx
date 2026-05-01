@@ -21,8 +21,8 @@ const engagementTypes = [
 // 3チャネル並列の問い合わせ導線。気軽な接点を増やすため等価に並べる
 const contactChannels = [
   {
-    title: '30分相談を予約',
-    detail: 'オンライン30分、Google Meet 等で対応します（指定可）',
+    title: '15分相談を予約',
+    detail: 'オンライン15分から、Google Meet 等で対応します（指定可・延長可）',
     cta: '日程を選んで予約',
     href: 'https://timerex.net/s/PLACEHOLDER',
     external: true,
