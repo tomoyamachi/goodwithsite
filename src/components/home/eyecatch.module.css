@@ -31,6 +31,15 @@
   white-space: nowrap;
 }
 
+/* 補足: 日本語メインの直下に置く中サイズの補足コピー */
+.headlineNote {
+  font-size: 14pt;
+  color: #555;
+  margin: 0 0 14px;
+  text-align: center;
+  font-weight: 500;
+}
+
 /* 英語サブ */
 .subHeadline {
   font-size: 12pt;
@@ -71,6 +80,10 @@
   .headline {
     font-size: 18pt;
     margin-bottom: 10px;
+  }
+  .headlineNote {
+    font-size: 12pt;
+    margin-bottom: 8px;
   }
   .subHeadline {
     font-size: 10pt;
