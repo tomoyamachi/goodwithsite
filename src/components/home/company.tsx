@@ -6,7 +6,7 @@ const tables = {
   CORPORATE: [
     {
       label: '商号',
-      val: '合同会社グッドウィズ (GOODWITH LLC.,)',
+      val: '合同会社グッドウィズ(GOODWITH LLC.,)',
     },
     {
       label: '設立',

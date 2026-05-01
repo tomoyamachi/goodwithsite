@@ -13,7 +13,7 @@ const clients = [
   },
   {
     industry: 'SaaS / カスタマーサポート業界',
-    detail: 'SaaS 事業者のクラウド・コンテナ環境のセキュリティ設計および運用支援',
+    detail: 'SaaS事業者のクラウド・コンテナ環境のセキュリティ設計および運用支援',
   },
 ]
 
@@ -30,7 +30,7 @@ const products = [
   {
     role: '寄稿・貢献',
     name: 'FutureVuls',
-    detail: 'Vuls をベースとした脆弱性管理サービスへの貢献（Future Architect 株式会社）',
+    detail: 'Vulsをベースとした脆弱性管理サービスへの貢献（Future Architect株式会社）',
     url: 'https://qiita.com/tomoyamachi/items/ce0c9ecb36f968e3324b',
     image: '/works/futurevuls.png',
   },

@@ -10,7 +10,7 @@ export default () => {
           <span className={styles.headlineLine}>コンテナセキュリティを</span>
           <span className={styles.headlineLine}>設計から実装まで</span>
         </h1>
-        <p className={styles.headlineNote}>AI 利用のセキュリティもカバー</p>
+        <p className={styles.headlineNote}>AI利用のセキュリティもカバー</p>
         <p className={styles.subHeadline}>Container & AI Security from design to implementation</p>
         <div className={styles.body}>
           <Button href="#contact">お仕事のご相談</Button>

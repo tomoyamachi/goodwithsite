@@ -48,7 +48,7 @@ export default () => (
       <div className={styles.channelGrid}>
         <div className={styles.channelCard}>
           <h4>15分相談を予約</h4>
-          <p>オンライン15分から、Google Meet 等で対応します（指定可・延長可）</p>
+          <p>オンライン15分から、Google Meet等で対応します（指定可・延長可）</p>
           <a
             href="https://timerex.net/s/tomoya.amachi_2469/e962a2ce"
             className={styles.channelButton}
@@ -68,15 +68,15 @@ export default () => (
         </div>
 
         <div className={styles.channelCard}>
-          <h4>X DM で連絡</h4>
-          <p>カジュアルなご質問・OSS 文脈のお声がけに</p>
+          <h4>X DMで連絡</h4>
+          <p>カジュアルなご質問・OSS文脈のお声がけに</p>
           <a
             href="https://x.com/tomoyamachi"
             className={styles.channelButton}
             target="_blank"
             rel="noopener noreferrer"
           >
-            @tomoyamachi へ送る →
+            @tomoyamachiへ送る →
           </a>
         </div>
       </div>
