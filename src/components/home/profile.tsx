@@ -1,5 +1,8 @@
 import styles from './profile.module.css'
 import Title from '../atoms/title'
+import Twitter from '../svgs/twitter'
+import GitHub from '../svgs/github'
+import Facebook from '../svgs/facebook'
 
 // 認定資格バッジ: カテゴリ括り・テキストを廃しフラットに並べる
 // 画像はサイト内に保存し、credly 等の認定検証ページにリンクする
@@ -105,11 +108,12 @@ const talks = [
   },
 ]
 
-const externalLinks = [
-  { label: '詳細プロフィール (Scrapbox)', href: 'https://scrapbox.io/tomoyamachi/about_GOODWITH' },
-  { label: 'X (Twitter)', href: 'https://x.com/tomoyamachi' },
-  { label: 'GitHub', href: 'https://github.com/tomoyamachi' },
-  { label: 'GitHub Org (goodwithtech)', href: 'https://github.com/goodwithtech' },
+// 個人の SNS / GitHub のみアイコンで配置。
+// GitHub Org (goodwithtech) はフッターと重複するため、Scrapbox は重複情報が多いため省く。
+const socialLinks = [
+  { label: 'X (Twitter)', href: 'https://x.com/tomoyamachi', Icon: Twitter },
+  { label: 'GitHub', href: 'https://github.com/tomoyamachi', Icon: GitHub },
+  { label: 'Facebook', href: 'https://www.facebook.com/tomoyamachi', Icon: Facebook },
 ]
 
 // バッジ1個: テキストなし、画像のみ。href があればリンクで包む
@@ -145,6 +149,20 @@ export default () => (
           Trivy 初期コミッタ / Dockle 作者
         </p>
         <p className={styles.role}>GOODWITH LLC 代表</p>
+        <div className={styles.socials}>
+          {socialLinks.map(({ label, href, Icon }) => (
+            <a
+              key={href}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className={styles.socialIcon}
+            >
+              <Icon height={22} />
+            </a>
+          ))}
+        </div>
       </div>
     </div>
 
@@ -175,17 +193,5 @@ export default () => (
       </div>
     </div>
 
-    <div className={styles.section}>
-      <h4 className={styles.subhead}>外部リンク</h4>
-      <ul className={styles.linkList}>
-        {externalLinks.map(l => (
-          <li key={l.href}>
-            <a href={l.href} target="_blank" rel="noopener noreferrer">
-              {l.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
   </div>
 )
