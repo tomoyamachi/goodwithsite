@@ -24,7 +24,7 @@ const contactChannels = [
     title: '15分相談を予約',
     detail: 'オンライン15分から、Google Meet 等で対応します（指定可・延長可）',
     cta: '日程を選んで予約',
-    href: 'https://timerex.net/s/PLACEHOLDER',
+    href: 'https://timerex.net/s/tomoya.amachi_2469/e962a2ce',
     external: true,
   },
   {
