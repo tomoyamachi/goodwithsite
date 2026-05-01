@@ -22,7 +22,7 @@ const engagementTypes = [
 const contactChannels = [
   {
     title: '30分相談を予約',
-    detail: 'オンライン30分、Google Meet で対応します',
+    detail: 'オンライン30分、Google Meet 等で対応します（指定可）',
     cta: '日程を選んで予約',
     href: 'https://timerex.net/s/PLACEHOLDER',
     external: true,
