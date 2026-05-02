@@ -33,7 +33,7 @@ describe('buildMetaTags', () => {
       expect(meta.ogImageUrl).toBe('https://www.goodwith.tech/og-image.jpg')
     })
 
-    it('og:title に日本語と英単語の間の半角スペースを含まない', () => {
+    it('description に日本語と英単語の間の半角スペースを含まない', () => {
       const meta = buildMetaTags()
       expect(meta.description).not.toMatch(/[A-Za-z0-9][ ][぀-ヿ一-鿿]/)
       expect(meta.description).not.toMatch(/[぀-ヿ一-鿿][ ][A-Za-z0-9]/)
