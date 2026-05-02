@@ -12,14 +12,13 @@ const LOGO_PATH = path.join(process.cwd(), 'public', 'big-logo.png')
 const WIDTH = 1200
 const HEIGHT = 630
 
-// ロゴをbase64で埋め込む（外部ファイル参照を避けてレンダリングを安定化）
-function logoDataUri(): string {
+// ロゴをbase64データURIに変換して HTML に埋め込む（外部ファイル参照を避けてレンダリングを安定化）
+function readLogoDataUri(): string {
   const buf = fs.readFileSync(LOGO_PATH)
   return `data:image/png;base64,${buf.toString('base64')}`
 }
 
-function buildHtml(): string {
-  const logo = logoDataUri()
+function buildHtml(logoDataUri: string): string {
   return `<!doctype html>
 <html lang="ja">
 <head>
@@ -80,7 +79,7 @@ function buildHtml(): string {
 </style>
 </head>
 <body>
-  <div class="left"><img src="${logo}" alt="GOODWITH" /></div>
+  <div class="left"><img src="${logoDataUri}" alt="GOODWITH" /></div>
   <div class="right">
     <div class="main-copy">コンテナセキュリティを<br />設計から実装まで</div>
     <div class="sub-copy">AI利用のセキュリティもカバー</div>
@@ -94,15 +93,17 @@ async function main() {
   if (!fs.existsSync(LOGO_PATH)) {
     throw new Error(`Logo not found at ${LOGO_PATH}`)
   }
+  const logoDataUri = readLogoDataUri()
 
   const browser = await puppeteer.launch({
     headless: true,
+    // ローカル実行専用。CI/サーバー環境では使わないこと（サンドボックスを無効化するため）
     args: ['--no-sandbox'],
   })
   try {
     const page = await browser.newPage()
     await page.setViewport({ width: WIDTH, height: HEIGHT, deviceScaleFactor: 1 })
-    await page.setContent(buildHtml(), { waitUntil: 'networkidle0' })
+    await page.setContent(buildHtml(logoDataUri), { waitUntil: 'networkidle0' })
     await page.screenshot({
       path: OUTPUT,
       type: 'jpeg',
