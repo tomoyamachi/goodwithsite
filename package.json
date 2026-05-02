@@ -8,6 +8,7 @@
     "build": "next build && npx tsx ./src/lib/build-rss.ts && npx tsx ./src/lib/build-sitemap.ts",
     "test": "vitest run",
     "test:watch": "vitest",
+    "og:generate": "npx tsx scripts/generate-og.ts",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore",
     "lint-staged": "lint-staged"
   },
@@ -36,6 +37,7 @@
     "lint-staged": "10.5.4",
     "pre-commit": "1.2.2",
     "prettier": "2.2.1",
+    "puppeteer": "^24.42.0",
     "tsx": "^4.21.0",
     "typescript": "5.3.3",
     "vitest": "^4.1.5"
