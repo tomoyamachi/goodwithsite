@@ -25,7 +25,7 @@ export async function getStaticProps({
 const RenderPost = ({ post }: { post: Post }) => {
   return (
     <>
-      <Header titlePre={post.title} />
+      <Header titlePre={post.title} ogTitleOverride={`${post.title} | GOODWITH`} />
       <div className={blogStyles.post}>
         <h1>{post.title}</h1>
         {post.authors.length > 0 && (
